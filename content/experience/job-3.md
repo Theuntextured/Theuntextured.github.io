@@ -8,4 +8,4 @@ location: "Remoto"
 duration: "Dicembre 2023 – ottobre 2025"
 ---
 
-La mia prima vera esperienza in un team, intrapresa dopo anni di progetti personali in C++ e Unreal Engine. Ho lavorato su sistemi software commerciali, affinando le mie capacità di problem solving, la comunicazione e l'importanza di scrivere codice affidabile.
+Prima esperienza in un team professionale, dopo anni di progetti personali in C++ e Unreal Engine. Ho contribuito allo sviluppo di diversi titoli commerciali per il cliente (dettagli coperti da NDA), lavorando in remoto su codice, integrazione e affidabilità in produzione.

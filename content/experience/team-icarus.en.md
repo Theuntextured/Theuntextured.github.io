@@ -10,4 +10,4 @@ duration: "October 2025 – present"
 
 Member of the Structures team on the [APA (Advanced Propulsion Aircraft)](https://icarus.polito.it/apa-2025/) project with [Team Icarus](https://icarus.polito.it/) at Politecnico di Torino, since October 2025.
 
-Collaborative structural design and analysis using **SolidWorks**, **HyperMesh**, and **HyperView**.
+Team-based structural design and analysis with **SolidWorks**, **HyperMesh**, and **HyperView** (meshing, loads, post-processing). The aircraft is in integration; structural validation results will follow the team's flight tests.

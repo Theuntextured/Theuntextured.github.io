@@ -9,7 +9,7 @@ draft = false
     subtitle="Studente di ingegneria meccanica · Politecnico di Torino"
     buttonText="Email"
     buttonUrl="mailto:riccardogiorgi29@gmail.com"
-    description="Studio ingegneria meccanica (corso in inglese). Il mio obiettivo professionale è l'ingegneria, mentre la programmazione e lo sviluppo software sono passioni che coltivo come forti competenze trasversali."
+    description="Studente di ingegneria meccanica (corso in inglese). Cerco stage in ambito meccanico/strutturale; programmazione e 3D come competenze di supporto, non come ruolo principale."
     imgSrc="images/showcase/showcase.png"
     imgScale="0.5"
 >}}

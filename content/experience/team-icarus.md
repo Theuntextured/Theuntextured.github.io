@@ -10,4 +10,4 @@ duration: "Ottobre 2025 – oggi"
 
 Membro del team Structures nel progetto [APA (Advanced Propulsion Aircraft)](https://icarus.polito.it/apa-2025/) del [Team Icarus](https://icarus.polito.it/) al Politecnico di Torino, attivo da ottobre 2025.
 
-Lavoro in squadra su progettazione e analisi strutturale con **SolidWorks**, **HyperMesh** e **HyperView**.
+Progettazione e analisi strutturale in team con **SolidWorks**, **HyperMesh** e **HyperView** (mesh, carichi, post-processing). Il velivolo è in fase di integrazione: i risultati di validazione strutturale saranno disponibili dopo i test di volo del team.

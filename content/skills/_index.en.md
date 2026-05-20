@@ -14,8 +14,12 @@ skill_categories:
         description: "Gameplay programming, rendering pipelines, multithreading, and performance optimization. Includes practical experience like the game jam: [Unintended Upgrades](https://the-untextured.itch.io/unintended-upgrades)."
       - name: "Problem solving & logic"
         description: "Ability to analyze complex systems, break down issues, and design efficient solutions. Fundamental to my engineering studies and technical automation."
-  - name: "Engineering (Team Icarus)"
+  - name: "Engineering (tools & studies)"
     skills:
+      - name: "Python"
+        description: "Scripting, data handling, and automation for university work and technical projects."
+      - name: "MATLAB"
+        description: "Numerical modelling and coursework from the mechanical engineering programme (year-one foundations and ongoing use)."
       - name: "SolidWorks"
         description: "Parametric 3D modeling and structural design of components for the APA project, with a strong focus on manufacturing specifications."
       - name: "FEA (HyperMesh & HyperView)"

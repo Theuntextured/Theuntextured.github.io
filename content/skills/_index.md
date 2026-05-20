@@ -14,8 +14,12 @@ skill_categories:
         description: "Sviluppo di logiche di gioco, gestione del rendering, multithreading e ottimizzazione delle performance. Esperienza pratica inclusa la game jam: [Unintended Upgrades](https://the-untextured.itch.io/unintended-upgrades)."
       - name: "Problem solving e logica"
         description: "Capacità di analizzare sistemi complessi, scomporre i problemi e trovare soluzioni efficienti. Fondamentale per i miei studi e per l'automazione dei processi tecnici."
-  - name: "Ingegneria (Team Icarus)"
+  - name: "Ingegneria (strumenti e studio)"
     skills:
+      - name: "Python"
+        description: "Scripting, dati e automazione per esercizi universitari e progetti tecnici."
+      - name: "MATLAB"
+        description: "Modellazione e calcolo numerico legati al percorso di ingegneria meccanica (esami di primo anno e applicazioni in corso)."
       - name: "SolidWorks"
         description: "Modellazione 3D parametrica e progettazione strutturale di componenti per il progetto APA, con attenzione alle specifiche di produzione."
       - name: "Analisi FEM (HyperMesh & HyperView)"

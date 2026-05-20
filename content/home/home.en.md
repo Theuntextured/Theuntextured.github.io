@@ -10,7 +10,7 @@ draft = false
     subtitle="Mechanical engineering student · Politecnico di Torino"
     buttonText="Email"
     buttonUrl="mailto:riccardogiorgi29@gmail.com"
-    description="Mechanical engineering student (English track). Engineering is my core focus, while programming and software development are passions I cultivate as strong supporting skills."
+    description="Mechanical engineering student (English track). Targeting internships in mechanical/structural engineering; programming and 3D as supporting skills, not my primary career path."
     imgSrc="images/showcase/showcase.png"
     imgScale="0.5"
  >}}
