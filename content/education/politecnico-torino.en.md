@@ -5,7 +5,7 @@ draft: false
 
 university: "Politecnico di Torino"
 year: "September 2024 – present"
-degree: "Bachelor's in Mechanical Engineering — English-taught programme (in progress)"
+degree: "Bachelor's in Mechanical Engineering - English-taught programme (in progress)"
 
 ---
 

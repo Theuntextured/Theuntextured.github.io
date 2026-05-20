@@ -1,7 +1,7 @@
 ---
 date: 2022-07-01T00:00:00+02:00
 draft: false
-title: "Cameriere — Monica Li"
+title: Cameriere - Monica Li
 jobTitle: "Cameriere"
 company: "Monica Li"
 location: "Infernetto, Roma"

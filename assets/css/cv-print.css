@@ -101,9 +101,14 @@ body.page-cv main.cv-page-main {
 }
 
 .cv-print__tagline {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.25rem;
   font-size: 11pt;
   color: #444;
+}
+
+.cv-print__site {
+  margin: 0 0 0.75rem;
+  font-size: 9.5pt;
 }
 
 .cv-print__contact-block {

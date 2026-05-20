@@ -1,11 +1,11 @@
 ---
 date: 2025-04-17T00:00:00+02:00
-title: 'Car Design — Istituto Volta'
+title: 'Car Design - Istituto Volta'
 draft: false
 
 university: "Istituto Volta (remote)"
 year: "Completed 17 April 2025"
-degree: "Car Design course — Autodesk Maya certificate"
+degree: "Car Design course - Autodesk Maya certificate"
 
 ---
 

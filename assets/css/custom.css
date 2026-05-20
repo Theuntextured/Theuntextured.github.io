@@ -161,3 +161,96 @@
 .footer .cv-toggle-wrap {
   justify-content: center;
 }
+
+/* Minimal breadcrumb (replaces theme pill/box style) */
+.site-breadcrumb-bar {
+  padding-top: 6.25rem;
+}
+
+.site-breadcrumb-bar nav {
+  display: block;
+}
+
+.site-breadcrumb-bar .breadcrumbs {
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Theme + Bootstrap both add separators — use only ::after here */
+.site-breadcrumb-bar .breadcrumb-item + .breadcrumb-item::before {
+  display: none !important;
+  content: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.site-breadcrumb-bar .breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  margin: 0 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.45;
+}
+
+.site-breadcrumb-bar .breadcrumb-item.active .breadcrumb-text {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.site-breadcrumb-bar .breadcrumb-link {
+  padding: 0;
+  border-radius: 0;
+  color: var(--rad-color-text-secondary, rgba(0, 0, 0, 0.55));
+}
+
+.site-breadcrumb-bar .breadcrumb-link:hover {
+  background: none;
+  box-shadow: none;
+  transform: none;
+  text-decoration: underline;
+  color: var(--rad-color-primary, inherit);
+}
+
+.site-breadcrumb-bar .breadcrumb-text {
+  max-width: none;
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb-bar .breadcrumbs {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb-bar .breadcrumb-link {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb-bar .breadcrumb-link:hover {
+  color: rgba(255, 255, 255, 0.9);
+  background: none;
+  box-shadow: none;
+}
+
+html[data-bs-theme="dark"] .site-breadcrumb-bar .breadcrumb-item:not(:last-child)::after {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .site-breadcrumb-bar {
+    padding-top: 5.5rem;
+  }
+
+  .site-breadcrumb-bar .breadcrumbs {
+    font-size: 0.75rem;
+  }
+}

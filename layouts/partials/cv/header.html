@@ -13,10 +13,14 @@
     <h1 class="cv-print__name">{{ .Site.Params.seo.person.name | default "Riccardo Giorgi" }}</h1>
     <p class="cv-print__tagline">
       {{- if eq $lang "it" -}}
-        Studente di ingegneria meccanica · Politecnico di Torino
+        Studente di Ingegneria Meccanica · Politecnico di Torino
       {{- else -}}
-        Mechanical engineering student · Politecnico di Torino
+        Mechanical Engineering Student · Politecnico di Torino
       {{- end -}}
+    </p>
+    <p class="cv-print__site">
+      <span class="cv-print__label">{{ if eq $lang "it" }}Sito{{ else }}Website{{ end }}</span>
+      <span class="cv-print__value">theuntextured.github.io</span>
     </p>
   </div>
 
@@ -56,8 +60,8 @@
         <span class="cv-print__value">github.com/Theuntextured</span>
       </li>
       <li>
-        <span class="cv-print__label">FAB</span>
-        <span class="cv-print__value">fab.com/sellers/The untextured Dev</span>
+        <span class="cv-print__label">FAB ({{ if eq $lang "it" }}Pubblicazioni Unreal Engine{{ else }}Unreal Engine Publications{{ end }})</span>
+        <span class="cv-print__value">fab.com/sellers/The%20untextured%20Dev</span>
       </li>
       <li>
         <span class="cv-print__label">{{ if eq $lang "it" }}Certificato Maya{{ else }}Maya certificate{{ end }}</span>
@@ -66,10 +70,6 @@
       <li>
         <span class="cv-print__label">{{ if eq $lang "it" }}Documenti accademici{{ else }}Academic documents{{ end }}</span>
         <span class="cv-print__value">drive.google.com/drive/folders/11flSWezaZYviuV65UKWBd8t6tS1aVzRW</span>
-      </li>
-      <li>
-        <span class="cv-print__label">{{ if eq $lang "it" }}Game jam (UE){{ else }}UE game jam{{ end }}</span>
-        <span class="cv-print__value">the-untextured.itch.io/unintended-upgrades</span>
       </li>
       <li>
         <span class="cv-print__label">Team Icarus APA</span>

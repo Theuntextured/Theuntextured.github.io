@@ -1,7 +1,7 @@
 ---
 date: 2022-07-01T00:00:00+02:00
 draft: false
-title: "Waiter — Monica Li"
+title: Waiter - Monica Li
 jobTitle: "Waiter"
 company: "Monica Li"
 location: "Infernetto, Rome"

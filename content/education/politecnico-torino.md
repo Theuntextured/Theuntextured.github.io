@@ -5,7 +5,7 @@ draft: false
 
 university: "Politecnico di Torino"
 year: "Settembre 2024 – oggi"
-degree: "Laurea in Ingegneria Meccanica — corso in inglese (in corso)"
+degree: "Laurea in Ingegneria Meccanica - corso in inglese (in corso)"
 
 ---
 

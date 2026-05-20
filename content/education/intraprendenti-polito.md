@@ -5,7 +5,7 @@ draft: false
 
 university: "Politecnico di Torino"
 year: "Settembre 2024 – oggi (in parallelo alla laurea)"
-degree: "INTRAPRENDENTI — percorso interdisciplinare per studenti meritevoli"
+degree: "INTRAPRENDENTI - percorso interdisciplinare per studenti meritevoli"
 cvBrief: "Percorso di eccellenza in parallelo alla laurea: laboratori, team multidisciplinari e sviluppo di soft skills."
 
 ---

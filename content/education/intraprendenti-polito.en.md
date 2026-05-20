@@ -5,7 +5,7 @@ draft: false
 
 university: "Politecnico di Torino"
 year: "September 2024 – present (parallel to degree)"
-degree: "INTRAPRENDENTI — interdisciplinary honours track for high-achieving students"
+degree: "INTRAPRENDENTI - interdisciplinary honours track for high-achieving students"
 cvBrief: "Honours track alongside the degree: labs, multidisciplinary teams, and soft-skill development."
 
 ---
