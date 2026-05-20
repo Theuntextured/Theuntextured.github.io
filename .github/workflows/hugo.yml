@@ -1,5 +1,11 @@
 # Build and deploy this Hugo site to GitHub Pages.
-# In the repo: Settings → Pages → Build and deployment → Source: GitHub Actions.
+#
+# One-time repo setup (required or deploy fails):
+#   Settings → Pages → Build and deployment → Source: "GitHub Actions"
+#   (Not "Deploy from a branch".)
+#
+# Workflow permissions (Settings → Actions → General → Workflow permissions):
+#   "Read and write permissions" (or at least allow GITHUB_TOKEN to write Pages).
 name: Deploy Hugo site to Pages
 
 on:
@@ -48,9 +54,16 @@ jobs:
           go-version-file: go.mod
           cache: true
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
+      - name: Resolve GitHub Pages base URL
+        id: baseurl
+        run: |
+          owner="${{ github.repository_owner }}"
+          repo="${{ github.event.repository.name }}"
+          if [ "$repo" = "${owner}.github.io" ]; then
+            echo "url=https://${owner}.github.io/" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=https://${owner}.github.io/${repo}/" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Install Node.js dependencies
         uses: actions/setup-node@v4
@@ -71,7 +84,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${{ steps.baseurl.outputs.url }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
