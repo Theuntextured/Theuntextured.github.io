@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{{- $isCvPage := and .File (eq .File.ContentBaseName "cv") -}}
+<html lang="{{- $.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}"
+    {{- if $isCvPage }}
+    data-bs-theme="light"
+    theme-forced="true"
+    theme-auto="false"
+    {{- else if .Site.Params.colorTheme.auto.disable }}
+    data-bs-theme="{{ .Site.Params.colorTheme.forced.theme }}"
+    theme-forced="true"
+    theme-auto="false"
+    {{- end }}>
+<head>
+    {{ partial "head.html" . }}
+    {{ partial "head_custom.html" . }}
+    {{- if or .Site.Params.viewTransitions (not (isset .Site.Params "viewTransitions")) }}
+    <meta name="view-transition" content="same-origin" />
+    {{- end }}
+</head>
+
+<body class="{{- if .IsHome }}home{{- end }}{{- with .File }} page-{{- .ContentBaseName }}{{- end }}">
+    {{- if not $isCvPage -}}
+    {{ partial "reading-progress.html" . }}
+    {{ partial "header.html" . }}
+    {{- end -}}
+
+    <main class="{{ if $isCvPage }}cv-page-main{{ else }}container{{ end }}">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{- if not $isCvPage -}}
+    <div class="d-print-none">
+        {{ partial "footer.html" . }}
+    </div>
+    {{- end -}}
+
+    {{ partial "base-foot.html" . }}
+    {{ partial "site-scripts.html" . }}
+
+    {{ block "footerfiles" . }}
+    {{ end }}
+</body>
+</html>

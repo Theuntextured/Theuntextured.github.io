@@ -1,0 +1,33 @@
+{{ $lang := .Page.Lang }}
+{{ $title := .Get "title" }}
+{{ if not $title }}
+  {{ if eq $lang "it" }}
+    {{ $title = "Formazione" }}
+  {{ else }}
+    {{ $title = "Education" }}
+  {{ end }}
+{{ end }}
+
+{{ $edu := where (where .Site.RegularPages "Type" "education") "Lang" $lang }}
+
+<section class="cv-print__section cv-print__section--education">
+  <h2 class="cv-print__section-title">{{ $title }}</h2>
+  {{ range sort $edu "Date" "desc" }}
+  <div class="cv-print__entry cv-print__entry--compact">
+    <div class="cv-print__entry-head">
+      <div class="cv-print__entry-role">
+        <strong>{{ .Params.degree }}</strong>
+        <span class="cv-print__entry-org">{{ .Params.university }}</span>
+      </div>
+      <time class="cv-print__entry-date">{{ .Params.year }}</time>
+    </div>
+    {{- if .Params.cvBrief -}}
+    <p class="cv-print__entry-body cv-print__entry-body--compact">{{ .Params.cvBrief }}</p>
+    {{- else if .Content -}}
+    <div class="cv-print__entry-body cv-print__entry-body--compact">
+      {{ .Content }}
+    </div>
+    {{- end -}}
+  </div>
+  {{ end }}
+</section>

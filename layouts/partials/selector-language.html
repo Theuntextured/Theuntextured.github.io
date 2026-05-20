@@ -1,0 +1,30 @@
+{{- $placement := .Scratch.Get "selectorPlacement" -}}
+<nav
+  id="{{ $placement }}-language-selector"
+  class="cv-toggle-wrap nav-link px-0"
+  aria-label="{{ i18n "language" }}"
+>
+  <div class="cv-toggle" role="group">
+    {{- range site.Languages -}}
+      {{- $lang := . -}}
+      {{- if eq $lang.Lang $.Lang -}}
+        <span class="cv-toggle__btn is-active" aria-current="true">{{ $lang.Lang | upper }}</span>
+      {{- else -}}
+        {{- $url := "" -}}
+        {{- range $.AllTranslations -}}
+          {{- if eq .Language.Lang $lang.Lang -}}
+            {{- $url = .RelPermalink -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not $url -}}
+          {{- if eq $lang.Lang "en" -}}
+            {{- $url = "/en/" -}}
+          {{- else -}}
+            {{- $url = "/" -}}
+          {{- end -}}
+        {{- end -}}
+        <a class="cv-toggle__btn" href="{{ $url }}" hreflang="{{ $lang.Lang }}" lang="{{ $lang.Lang }}">{{ $lang.Lang | upper }}</a>
+      {{- end -}}
+    {{- end -}}
+  </div>
+</nav>

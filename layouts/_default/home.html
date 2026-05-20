@@ -1,0 +1,47 @@
+<!-- inject:../components/baseHead/baseHeadStart.html -->
+<!DOCTYPE html>
+<html lang="{{- $.Lang }}" dir="{{ .Site.Language.LanguageDirection | default "ltr" }}"
+	{{- if .Site.Params.colorTheme.auto.disable }}
+	data-bs-theme="{{ .Site.Params.colorTheme.forced.theme }}"
+	theme-forced="true"
+	theme-auto="false"
+	{{- end }}>
+
+<head>
+
+    {{ partial "head.html" . }}
+
+    {{ partial "head_custom.html" . }}
+    {{- if or .Site.Params.viewTransitions (not (isset .Site.Params "viewTransitions")) }}
+    <meta name="view-transition" content="same-origin" />
+    {{- end }}
+</head>
+
+<body class="{{ if .IsHome }}home{{ end }}">
+
+	{{ partial "header.html" . }}
+
+    <main id="main-content" tabindex="-1">
+    {{ $home := where (where (where .Site.Pages "Type" "home") "Lang" .Lang) "Kind" "page" }}
+    {{ $homeCount := len $home }}
+
+    {{ if lt $homeCount 1 }}
+        {{ range .Site.Params.sections }}
+        {{ partial . $ }}
+        {{ end }}
+    {{ else }}
+    {{ range (sort $home "Date" "desc") }}
+        <div class="container home-container">
+        {{ .Content | safeHTML }}
+        </div>
+    {{ end }}
+    {{ end }}
+    </main>
+
+	{{ partial "footer.html" . }}
+    {{ partial "base-foot.html" . }}
+    {{ partial "site-scripts.html" . }}
+</body>
+
+</html>
+<!-- endinject -->

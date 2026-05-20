@@ -1,0 +1,12 @@
+{{- $placement := .Scratch.Get "selectorPlacement" -}}
+<button
+  type="button"
+  id="cv-theme-toggle-{{ $placement }}"
+  class="cv-theme-toggle-btn nav-link"
+  data-label-light="{{ i18n "theme_light" }}"
+  data-label-dark="{{ i18n "theme_dark" }}"
+  aria-label="{{ i18n "toggle_theme" }}"
+  aria-pressed="false"
+>
+  <span class="cv-theme-toggle-btn__icon" aria-hidden="true">☀</span>
+</button>

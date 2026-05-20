@@ -1,0 +1,38 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+*~
+
+# Hugo build output
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+.hugo_build.lock
+
+# Hugo binaries (if downloaded locally)
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Node (theme SCSS / Bootstrap)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env / secrets
+.env
+.env.*
+
+# Sass
+.sass-cache
+
+# Misc local artifacts
+.dist/
+.tmp/
+*.tar.gz

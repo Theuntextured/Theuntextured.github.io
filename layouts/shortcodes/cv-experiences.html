@@ -1,0 +1,24 @@
+{{ $lang := .Page.Lang }}
+{{ $baseLangSite := hugo.Sites.Default }}
+{{ $xp := where (where .Site.RegularPages "Type" "experience") "Lang" $lang }}
+{{ $xp = $xp | lang.Merge (where $baseLangSite.RegularPages "Type" "experience") }}
+
+<section class="cv-print__section cv-print__section--experience">
+  <h2 class="cv-print__section-title">
+    {{- if eq $lang "it" -}}Esperienze{{- else -}}Experience{{- end -}}
+  </h2>
+  {{ range sort $xp "Date" "desc" }}
+  <div class="cv-print__entry">
+    <div class="cv-print__entry-head">
+      <div class="cv-print__entry-role">
+        <strong>{{ .Params.jobTitle }}</strong>
+        <span class="cv-print__entry-org">{{ .Params.company }}{{ with .Params.location }} · {{ . }}{{ end }}</span>
+      </div>
+      <time class="cv-print__entry-date">{{ .Params.duration }}</time>
+    </div>
+    <div class="cv-print__entry-body">
+      {{ .Content }}
+    </div>
+  </div>
+  {{ end }}
+</section>

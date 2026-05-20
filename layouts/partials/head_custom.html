@@ -1,0 +1,5 @@
+{{ if and .File (eq .File.ContentBaseName "cv") }}
+  {{ with resources.Get "css/cv-print.css" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ end }}

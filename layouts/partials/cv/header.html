@@ -1,0 +1,88 @@
+{{ $lang := .Lang }}
+<nav class="cv-print__toolbar d-print-none" aria-label="{{ if eq $lang "it" }}Azioni CV{{ else }}CV actions{{ end }}">
+  <a class="cv-print__toolbar-link" href="{{ "/" | relLangURL }}">
+    {{- if eq $lang "it" -}}← Torna al sito{{- else -}}← Back to site{{- end -}}
+  </a>
+  <button type="button" class="cv-print__toolbar-btn" onclick="window.print()">
+    {{- if eq $lang "it" -}}Stampa / Salva PDF{{- else -}}Print / Save PDF{{- end -}}
+  </button>
+</nav>
+{{/* Use div, not <header>: theme _print.scss hides all header elements in print */}}
+<div class="cv-print__header" role="banner">
+  <div class="cv-print__header-main">
+    <h1 class="cv-print__name">{{ .Site.Params.seo.person.name | default "Riccardo Giorgi" }}</h1>
+    <p class="cv-print__tagline">
+      {{- if eq $lang "it" -}}
+        Studente di ingegneria meccanica · Politecnico di Torino
+      {{- else -}}
+        Mechanical engineering student · Politecnico di Torino
+      {{- end -}}
+    </p>
+  </div>
+
+  <div class="cv-print__contact-block">
+    <h2 class="cv-print__contact-heading">
+      {{- if eq $lang "it" -}}Contatti{{- else -}}Contact{{- end -}}
+    </h2>
+    <ul class="cv-print__contact">
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Email{{ else }}Email{{ end }}</span>
+        <span class="cv-print__value">riccardogiorgi29@gmail.com</span>
+      </li>
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Telefono{{ else }}Phone{{ end }}</span>
+        <span class="cv-print__value">+39 371 387 0042</span>
+      </li>
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Luogo{{ else }}Location{{ end }}</span>
+        <span class="cv-print__value">
+          {{- if eq $lang "it" -}}10141 Torino, Italia{{- else -}}10141 Turin, Italy{{- end -}}
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="cv-print__contact-block">
+    <h2 class="cv-print__contact-heading">
+      {{- if eq $lang "it" -}}Collegamenti{{- else -}}Links{{- end -}}
+    </h2>
+    <ul class="cv-print__contact cv-print__links">
+      <li>
+        <span class="cv-print__label">LinkedIn</span>
+        <span class="cv-print__value">linkedin.com/in/riccardo-giorgi-67b1b2240</span>
+      </li>
+      <li>
+        <span class="cv-print__label">GitHub</span>
+        <span class="cv-print__value">github.com/Theuntextured</span>
+      </li>
+      <li>
+        <span class="cv-print__label">FAB</span>
+        <span class="cv-print__value">fab.com/sellers/The untextured Dev</span>
+      </li>
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Certificato Maya{{ else }}Maya certificate{{ end }}</span>
+        <span class="cv-print__value">credly.com/badges/286b9940-d45e-47c7-855e-a76377268bc5</span>
+      </li>
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Documenti accademici{{ else }}Academic documents{{ end }}</span>
+        <span class="cv-print__value">drive.google.com/drive/folders/11flSWezaZYviuV65UKWBd8t6tS1aVzRW</span>
+      </li>
+      <li>
+        <span class="cv-print__label">{{ if eq $lang "it" }}Game jam (UE){{ else }}UE game jam{{ end }}</span>
+        <span class="cv-print__value">the-untextured.itch.io/unintended-upgrades</span>
+      </li>
+      <li>
+        <span class="cv-print__label">Team Icarus APA</span>
+        <span class="cv-print__value">icarus.polito.it/apa-2025</span>
+      </li>
+    </ul>
+  </div>
+
+  <p class="cv-print__screen-hint d-print-none">
+    {{- if eq $lang "it" -}}
+      Usa <kbd>Ctrl+P</kbd> (o <kbd>⌘P</kbd>) per salvare in PDF. Su carta, contatti e link sono riportati come testo (non come collegamenti cliccabili).
+    {{- else -}}
+      Use <kbd>Ctrl+P</kbd> (or <kbd>⌘P</kbd>) to save as PDF. On paper, contacts and links are shown as plain text (not clickable links).
+    {{- end -}}
+  </p>
+</div>

@@ -1,0 +1,163 @@
+/* Skills page: fix badge overlap and long descriptions */
+.skill-meta {
+  margin-top: 0.75rem;
+}
+
+.skill-meta .skill-years {
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.skill-meta .skill-description {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.skill-meta .skill-description p {
+  margin-bottom: 0;
+}
+
+.skill-meta .skill-description a {
+  word-break: break-word;
+}
+
+/* Language + theme segmented toggles (replace dropdowns) */
+.cv-selector-item {
+  display: flex;
+  align-items: center;
+}
+
+.cv-toggle-wrap {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.cv-toggle {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.cv-toggle__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 2.75rem;
+  padding: 0.35rem 0.65rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cv-toggle__btn:hover,
+.cv-toggle__btn:focus-visible {
+  background: rgba(0, 0, 0, 0.06);
+  color: inherit;
+}
+
+.cv-toggle__btn.is-active,
+.cv-toggle__btn[aria-pressed="true"] {
+  background: var(--bs-primary, #478079);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cv-toggle__icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.cv-toggle__label {
+  white-space: nowrap;
+}
+
+/* Single icon button: sun = light mode, moon = dark mode */
+.cv-theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.04);
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+/* nav-link sets min-height: 50px — unequal width/height + border-radius: 50% → oval */
+.header .navbar .nav-item .cv-theme-toggle-btn.nav-link,
+.footer .cv-theme-toggle-btn.nav-link {
+  min-height: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+  font-weight: 400;
+}
+
+.header .navbar .nav-item .cv-theme-toggle-btn.nav-link::after {
+  display: none;
+}
+
+.cv-theme-toggle-btn:hover,
+.cv-theme-toggle-btn:focus-visible {
+  background: rgba(0, 0, 0, 0.08);
+  color: inherit;
+}
+
+.cv-theme-toggle-btn:active {
+  transform: scale(0.96);
+}
+
+.cv-theme-toggle-btn__icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+[data-bs-theme="dark"] .cv-theme-toggle-btn {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-bs-theme="dark"] .cv-theme-toggle-btn:hover,
+[data-bs-theme="dark"] .cv-theme-toggle-btn:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-bs-theme="dark"] .cv-toggle {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-bs-theme="dark"] .cv-toggle__btn:hover,
+[data-bs-theme="dark"] .cv-toggle__btn:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.footer .cv-toggle-wrap {
+  justify-content: center;
+}

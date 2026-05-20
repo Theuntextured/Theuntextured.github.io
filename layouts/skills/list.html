@@ -1,0 +1,62 @@
+{{ define "main" }}
+<section id="main-content" tabindex="-1" class="site-skills-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="site-skills-title">{{ .Title }}</h1>
+                <div class="site-skills-description">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+
+        {{ $lang := .Lang }}
+        {{ range .Params.skill_categories }}
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="mb-4">{{ .name }}</h2>
+                <div class="row">
+                    {{ range .skills }}
+                    <div class="col-md-6">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <h3 class="skill-name">{{ .name }}</h3>
+                            </div>
+                            <div class="skill-meta">
+                                {{- $badge := "" -}}
+                                {{- if .sinceYear -}}
+                                    {{- $count := sub now.Year (int .sinceYear) -}}
+                                    {{- if lt $count 1 -}}{{- $count = 1 -}}{{- end -}}
+                                    {{- if eq $lang "it" -}}
+                                        {{- $badge = printf "%d+ anni" $count -}}
+                                    {{- else -}}
+                                        {{- $badge = printf "%d+ years" $count -}}
+                                    {{- end -}}
+                                {{- else if .period -}}
+                                    {{- $badge = .period -}}
+                                {{- else if .badge -}}
+                                    {{- $badge = .badge -}}
+                                {{- else if .years -}}
+                                    {{- if eq $lang "it" -}}
+                                        {{- $badge = printf "%s anni" .years -}}
+                                    {{- else -}}
+                                        {{- $badge = printf "%s years" .years -}}
+                                    {{- end -}}
+                                {{- end -}}
+                                {{- with $badge -}}
+                                <span class="skill-years">{{ . }}</span>
+                                {{- end -}}
+                                {{- with .description -}}
+                                <div class="skill-description">{{ . | markdownify }}</div>
+                                {{- end -}}
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ end }}
