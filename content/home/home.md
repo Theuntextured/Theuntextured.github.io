@@ -17,7 +17,6 @@ draft = false
 {{< platform-links >}}
     {{< link icon="linkedin" url="https://www.linkedin.com/in/riccardo-giorgi-67b1b2240/" >}}
     {{< link icon="square-github" url="https://github.com/Theuntextured" >}}
-    {{< link icon="google-drive" url="https://drive.google.com/drive/folders/11flSWezaZYviuV65UKWBd8t6tS1aVzRW?usp=sharing" >}}
     {{< link icon="fab" url="https://www.fab.com/sellers/The%20untextured%20Dev" >}}
 {{< /platform-links >}}
 

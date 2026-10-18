@@ -1,4 +1,4 @@
-baseURL = "https://theuntextured.github.io/"
+baseURL = "https://riccardogiorgi.tech/"
 title = "CV: Riccardo Giorgi"
 defaultContentLanguage = "it"
 defaultContentLanguageInSubdir = false
@@ -77,7 +77,7 @@ siteImage = "/img/og-img.png"
 
 [params.seo.person]
 name = "Riccardo Giorgi"
-url = "https://theuntextured.github.io/"
+url = "https://riccardogiorgi.tech/"
 sameAs = [
   "https://github.com/Theuntextured",
   "https://www.linkedin.com/in/riccardo-giorgi-67b1b2240/",
