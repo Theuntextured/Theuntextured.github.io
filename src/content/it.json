@@ -1,0 +1,76 @@
+{
+  "pages": {
+    "home": "Home",
+    "links": "Link",
+    "competences": "Competenze e attività",
+    "certificates": "Certificati",
+    "cv": "CV stampabile"
+  },
+  "placeholder": "Contenuti in arrivo.",
+  "navigation": "Navigazione principale",
+  "language": "Lingua",
+  "skip": "Vai al contenuto",
+  "home": {
+    "eyebrow": "Qualcosa su di me",
+    "headline": "[Il tuo ruolo, i tuoi interessi e cosa ti motiva.]",
+    "intro": "[Presentati in due o tre frasi: cosa studi o di cosa ti occupi, cosa ti piace costruire o capire e un dettaglio che racconti il tuo modo di lavorare.]",
+    "nowTitle": "In questo periodo",
+    "nowIntro": "A cosa sto dedicando il mio tempo.",
+    "items": [
+      {
+        "label": "Imparo",
+        "text": "[Cosa stai studiando o approfondendo? Cita il tuo percorso, un argomento o una competenza che stai sviluppando.]"
+      },
+      {
+        "label": "Realizzo",
+        "text": "[Racconta un progetto o un’attività a cui partecipi, il tuo contributo e perché ti interessa.]"
+      },
+      {
+        "label": "Guardo avanti",
+        "text": "[Cosa vorresti provare? Descrivi un’opportunità, un problema o un settore che vorresti esplorare.]"
+      }
+    ],
+    "exploreTitle": "Conoscimi meglio",
+    "links": [
+      {
+        "page": "competences",
+        "title": "Di cosa mi occupo",
+        "description": "Competenze, progetti e attività"
+      },
+      {
+        "page": "cv",
+        "title": "Il mio CV",
+        "description": "Formazione ed esperienze"
+      },
+      {
+        "page": "links",
+        "title": "Dove trovarmi",
+        "description": "Profili e contatti"
+      }
+    ],
+    "portraitAlt": "Ritratto provvisorio da archivio, non di Riccardo Giorgi",
+    "portraitCaption": "[Sostituisci con una tua foto]",
+    "projectAlt": "Foto provvisoria di un computer e una postazione di lavoro",
+    "projectCaption": "[Aggiungi una foto di un progetto o attività]"
+  },
+  "theme": {
+    "light": "",
+    "dark": ""
+  },
+  "links": {
+    "title": "Trova tutto",
+    "intro": "Una mappa di progetti, profili e modi per contattarmi.",
+    "hint": "Apri i rami con un clic. Trascina i nodi per spostarli e lo sfondo per muoverti. Scorri o usa due dita per lo zoom.",
+    "expand": "Espandi tutto",
+    "collapse": "Chiudi tutto",
+    "fit": "Adatta alla vista",
+    "reset": "Ripristina layout",
+    "list": "Sfoglia come elenco",
+    "graph": "Albero interattivo dei link",
+    "placeholder": "Alcuni link esterni sono esempi. Sostituiscili nel file JSON.",
+    "zoomIn": "Ingrandisci",
+    "zoomOut": "Riduci",
+    "textView": "Vista testo",
+    "treeView": "Vista albero"
+  }
+}

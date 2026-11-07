@@ -1,0 +1,144 @@
+{
+  "id": "root",
+  "icon": "network",
+  "name": {
+    "en": "Find everything",
+    "it": "Trova tutto"
+  },
+  "children": [
+    {
+      "id": "website",
+      "icon": "folder",
+      "name": {
+        "en": "This website",
+        "it": "Questo sito"
+      },
+      "children": [
+        {
+          "id": "about",
+          "icon": "image",
+          "name": {
+            "en": "About me",
+            "it": "Chi sono"
+          },
+          "description": {
+            "en": "The short introduction",
+            "it": "Una breve presentazione"
+          },
+          "page": "home"
+        },
+        {
+          "id": "work",
+          "icon": "wrench",
+          "name": {
+            "en": "Competences & activities",
+            "it": "Competenze e attività"
+          },
+          "description": {
+            "en": "What I do and build",
+            "it": "Cosa faccio e realizzo"
+          },
+          "page": "competences"
+        },
+        {
+          "id": "certificates",
+          "icon": "graduation-cap",
+          "name": {
+            "en": "Certificates",
+            "it": "Certificati"
+          },
+          "description": {
+            "en": "Courses and qualifications",
+            "it": "Corsi e qualifiche"
+          },
+          "page": "certificates"
+        },
+        {
+          "id": "cv",
+          "icon": "file-text",
+          "name": {
+            "en": "Printable CV",
+            "it": "CV stampabile"
+          },
+          "description": {
+            "en": "Education and experience",
+            "it": "Formazione ed esperienze"
+          },
+          "page": "cv"
+        }
+      ]
+    },
+    {
+      "id": "profiles",
+      "icon": "link",
+      "name": {
+        "en": "Around the web",
+        "it": "Sul web"
+      },
+      "children": [
+        {
+          "id": "code",
+          "icon": "link",
+          "name": {
+            "en": "Code profile",
+            "it": "Profilo di sviluppo"
+          },
+          "description": {
+            "en": "[Replace with your GitHub URL]",
+            "it": "[Inserisci il tuo URL GitHub]"
+          },
+          "href": "https://example.com/#github"
+        },
+        {
+          "id": "professional",
+          "icon": "link",
+          "name": {
+            "en": "Professional profile",
+            "it": "Profilo professionale"
+          },
+          "description": {
+            "en": "[Replace with your LinkedIn URL]",
+            "it": "[Inserisci il tuo URL LinkedIn]"
+          },
+          "href": "https://example.com/#linkedin"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "icon": "mail",
+      "name": {
+        "en": "Get in touch",
+        "it": "Contatti"
+      },
+      "children": [
+        {
+          "id": "email",
+          "icon": "mail",
+          "name": {
+            "en": "Email",
+            "it": "Email"
+          },
+          "description": {
+            "en": "[Replace with your mailto: address]",
+            "it": "[Inserisci il tuo indirizzo mailto:]"
+          },
+          "href": "https://example.com/#email"
+        },
+        {
+          "id": "other",
+          "icon": "link",
+          "name": {
+            "en": "Another way to say hello",
+            "it": "Un altro modo per salutarmi"
+          },
+          "description": {
+            "en": "[Add your preferred contact method]",
+            "it": "[Aggiungi il tuo contatto preferito]"
+          },
+          "href": "https://example.com/#contact"
+        }
+      ]
+    }
+  ]
+}
