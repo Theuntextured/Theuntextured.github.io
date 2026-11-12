@@ -1,0 +1,30 @@
+{
+  "competences": [
+    {
+      "id": "software-development",
+      "title": { "en": "Software development", "it": "Sviluppo software" },
+      "body": { "en": "competences/software-development.en.md", "it": "competences/software-development.it.md" }
+    },
+    {
+      "id": "problem-solving",
+      "title": { "en": "Problem solving", "it": "Risoluzione dei problemi" },
+      "body": { "en": "competences/problem-solving.en.md", "it": "competences/problem-solving.it.md" }
+    }
+  ],
+  "activities": [
+    {
+      "id": "personal-projects",
+      "title": { "en": "Personal projects", "it": "Progetti personali" },
+      "image": {
+        "src": "images/project-placeholder.jpg",
+        "alt": { "en": "Temporary stock photo of a laptop and workspace", "it": "Foto provvisoria di un computer e una postazione di lavoro" }
+      },
+      "body": { "en": "activities/personal-projects.en.md", "it": "activities/personal-projects.it.md" }
+    },
+    {
+      "id": "education",
+      "title": { "en": "Education & learning", "it": "Formazione e studio" },
+      "body": { "en": "activities/education.en.md", "it": "activities/education.it.md" }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 # Riccardo Giorgi — personal website
 
-Minimal bilingual static site. Requires Node.js 22+; no dependencies to install.
+Minimal bilingual static site. Requires Node.js 22+. Run `npm ci` once to install
+the build-time Markdown renderer and HTML sanitizer.
 
 ## Local preview
 
@@ -27,7 +28,45 @@ To add a page, add its ID to src/site.mjs and its title to both content files.
 Navigation updates automatically. As real content is added, extend content
 entries and the shared layout; keep translated copy out of scripts.
 
-This version intentionally contains only navigation, headings and placeholders.
+The example content uses bracketed writing prompts until real content is added.
+
+## Competences & activities
+
+Edit `src/content/competences-activities.json` to add, remove or reorder entries.
+Its `competences` and `activities` arrays control the Skills / Experience switcher.
+Each entry has a unique lowercase `id`, bilingual `title`, and bilingual `body`
+paths relative to `src/content/`, for example:
+
+```json
+{
+  "id": "my-project",
+  "title": { "en": "My project", "it": "Il mio progetto" },
+  "body": {
+    "en": "activities/my-project.en.md",
+    "it": "activities/my-project.it.md"
+  },
+  "image": {
+    "src": "images/my-project.jpg",
+    "alt": { "en": "Project description", "it": "Descrizione del progetto" }
+  }
+}
+```
+
+Keep Markdown files in the matching `competences/` or `activities/` folder.
+The optional `image.src` is relative to `src/assets/`; omit the entire `image`
+object for a text-only entry. Markdown and images remain separate files.
+Both language versions are required. The build checks IDs, paths, translations,
+and missing files, and converts Markdown to sanitized HTML. Headings, lists,
+links, images, block quotes, code blocks and tables are supported. Use full HTTPS
+URLs or site-relative URLs for links/images inside Markdown (not paths relative
+to the source `.md` file).
+
+All entries start collapsed and expand independently. Switching groups preserves
+their open state; without JavaScript, both groups are visible and collapsible.
+The reusable disclosure is in `src/components/content-card.mjs`; page markup is
+in `src/pages/competences.mjs`, with its styles and switcher in
+`src/assets/competences.css` and `src/assets/competences.js`.
+Run `npm run build` after content edits to update the running local preview.
 
 ## Home page
 

@@ -6,6 +6,16 @@
     "certificates": "Certificati",
     "cv": "CV stampabile"
   },
+  "competences": {
+    "eyebrow": "Competenze ed esperienze",
+    "intro": "Esplora per competenza o per esperienza. Apri un titolo per saperne di più.",
+    "groupBy": "Raggruppa per",
+    "competences": "Competenze",
+    "activities": "Esperienze",
+    "competencesIntro": "Conoscenze, strumenti e metodi di lavoro.",
+    "activitiesIntro": "Progetti, studi ed esperienze sul campo.",
+    "empty": "Nuovi contenuti in arrivo."
+  },
   "placeholder": "Contenuti in arrivo.",
   "navigation": "Navigazione principale",
   "language": "Lingua",

@@ -1,6 +1,8 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import { pages, languages } from '../src/site.mjs';
 import { render } from '../src/layout.mjs';
+import { loadCompetences } from './competences-content.mjs';
+const competences = await loadCompetences();
 const tree = JSON.parse(await readFile('src/content/links-tree.json', 'utf8'));
 const ids = new Set();
 async function validate(node) {
@@ -25,7 +27,7 @@ for (const lang of languages) {
  for (const page of pages) {
   const directory = 'dist/' + lang + '/' + (page === 'home' ? '' : page + '/');
   await mkdir(directory,{recursive:true});
-  await writeFile(directory + 'index.html',render(lang,page,copy,tree));
+  await writeFile(directory + 'index.html',render(lang,page,copy,tree,competences[lang]));
  }
 }
 await cp('src/assets','dist/assets',{recursive:true});

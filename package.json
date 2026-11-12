@@ -4,5 +4,9 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "start": "npm run build && node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "marked": "^18.2.0",
+    "sanitize-html": "^2.18.2"
   }
 }

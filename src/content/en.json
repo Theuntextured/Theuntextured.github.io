@@ -6,6 +6,16 @@
     "certificates": "Certificates",
     "cv": "Printable CV"
   },
+  "competences": {
+    "eyebrow": "Skills & experience",
+    "intro": "Explore by skill or by experience. Open a title to read more.",
+    "groupBy": "Group entries by",
+    "competences": "Skills",
+    "activities": "Experience",
+    "competencesIntro": "Knowledge, tools and ways of working.",
+    "activitiesIntro": "Projects, studies and hands-on experience.",
+    "empty": "New entries coming soon."
+  },
   "placeholder": "Content coming soon.",
   "navigation": "Main navigation",
   "language": "Language",
