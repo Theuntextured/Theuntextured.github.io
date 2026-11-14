@@ -1,0 +1,18 @@
+[
+  {
+    "id": "example-certificate",
+    "title": { "en": "[Certificate title]", "it": "[Titolo del certificato]" },
+    "description": {
+      "en": "[Describe the course or qualification, its issuer, when you earned it, and the skills it recognises. Replace the example link with your certificate URL or a local PDF.]",
+      "it": "[Descrivi il corso o la qualifica, l’ente che lo ha rilasciato, quando lo hai ottenuto e le competenze riconosciute. Sostituisci il link di esempio con l’URL del certificato o un PDF locale.]"
+    },
+    "image": {
+      "src": "images/certificate-placeholder.svg",
+      "alt": {
+        "en": "Placeholder certificate illustration",
+        "it": "Illustrazione segnaposto di un certificato"
+      }
+    },
+    "href": "https://example.com/certificate"
+  }
+]

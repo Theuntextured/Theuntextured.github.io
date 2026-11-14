@@ -2,11 +2,12 @@
 const switcher = document.querySelector('[data-group-switcher]');
 if (switcher) {
   const buttons = [...switcher.querySelectorAll('[data-content-group]')];
-  const select = group => {
+  const select = (group) => {
     for (const button of buttons) {
       const active = button.dataset.contentGroup === group;
       button.setAttribute('aria-pressed', String(active));
-      document.getElementById(button.getAttribute('aria-controls')).hidden = !active;
+      document.getElementById(button.getAttribute('aria-controls')).hidden =
+        !active;
     }
   };
   for (const button of buttons) {

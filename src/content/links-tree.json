@@ -41,6 +41,19 @@
           "page": "competences"
         },
         {
+          "id": "current-projects",
+          "icon": "wrench",
+          "name": {
+            "en": "Current projects",
+            "it": "Progetti in corso"
+          },
+          "description": {
+            "en": "What I’m working on now",
+            "it": "A cosa sto lavorando in questo periodo"
+          },
+          "page": "projects"
+        },
+        {
           "id": "certificates",
           "icon": "graduation-cap",
           "name": {

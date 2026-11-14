@@ -3,6 +3,7 @@
     "home": "Home",
     "links": "Links",
     "competences": "Competences & activities",
+    "projects": "Current projects",
     "certificates": "Certificates",
     "cv": "Printable CV"
   },
@@ -15,6 +16,18 @@
     "competencesIntro": "Knowledge, tools and ways of working.",
     "activitiesIntro": "Projects, studies and hands-on experience.",
     "empty": "New entries coming soon."
+  },
+  "projects": {
+    "eyebrow": "Work in progress",
+    "intro": "What I’m building and exploring right now. Open a title to see the details and next steps.",
+    "view": "View project",
+    "empty": "Project updates coming soon."
+  },
+  "certificates": {
+    "eyebrow": "Learning & qualifications",
+    "intro": "Open a title to see the details and view the certificate.",
+    "view": "View certificate",
+    "empty": "New certificates coming soon."
   },
   "placeholder": "Content coming soon.",
   "navigation": "Main navigation",

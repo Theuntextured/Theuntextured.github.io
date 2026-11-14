@@ -3,6 +3,7 @@
     "home": "Home",
     "links": "Link",
     "competences": "Competenze e attività",
+    "projects": "Progetti in corso",
     "certificates": "Certificati",
     "cv": "CV stampabile"
   },
@@ -15,6 +16,18 @@
     "competencesIntro": "Conoscenze, strumenti e metodi di lavoro.",
     "activitiesIntro": "Progetti, studi ed esperienze sul campo.",
     "empty": "Nuovi contenuti in arrivo."
+  },
+  "projects": {
+    "eyebrow": "Lavori in corso",
+    "intro": "Cosa sto realizzando e approfondendo in questo periodo. Apri un titolo per leggere i dettagli e i prossimi passi.",
+    "view": "Visualizza progetto",
+    "empty": "Aggiornamenti sui progetti in arrivo."
+  },
+  "certificates": {
+    "eyebrow": "Formazione e qualifiche",
+    "intro": "Apri un titolo per leggere i dettagli e visualizzare il certificato.",
+    "view": "Visualizza certificato",
+    "empty": "Nuovi certificati in arrivo."
   },
   "placeholder": "Contenuti in arrivo.",
   "navigation": "Navigazione principale",

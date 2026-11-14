@@ -1,0 +1,18 @@
+[
+  {
+    "id": "current-project",
+    "title": { "en": "[Project title]", "it": "[Titolo del progetto]" },
+    "body": {
+      "en": "projects/current-project.en.md",
+      "it": "projects/current-project.it.md"
+    },
+    "image": {
+      "src": "images/project-placeholder.jpg",
+      "alt": {
+        "en": "Temporary stock photo of a laptop and workspace",
+        "it": "Foto provvisoria di un computer e una postazione di lavoro"
+      }
+    },
+    "href": "https://example.com/project"
+  }
+]

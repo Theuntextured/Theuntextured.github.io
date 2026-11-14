@@ -1,0 +1,21 @@
+.projects-page {
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+.projects-heading {
+  max-width: 760px;
+}
+.projects-heading .eyebrow {
+  margin-bottom: 1rem;
+}
+.projects-heading h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.05em;
+}
+.projects-heading > p:last-child {
+  margin-top: 1.25rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+.projects-list {
+  margin-top: 2.5rem;
+}
