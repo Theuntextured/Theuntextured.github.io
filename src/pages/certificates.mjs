@@ -1,4 +1,5 @@
 import { renderCertificateCard } from '../components/certificate-card.mjs';
+import { renderInline } from '../inline-markdown.mjs';
 
 export function renderCertificates(items, copy, escape, root) {
   const labels = copy.certificates;
@@ -6,12 +7,12 @@ export function renderCertificates(items, copy, escape, root) {
     ? items
         .map((item) => renderCertificateCard(item, labels, escape, root))
         .join('')
-    : /* HTML */ `<p>${escape(labels.empty)}</p>`;
+    : /* HTML */ `<p>${renderInline(labels.empty)}</p>`;
 
   return /* HTML */ `<div class="certificates-heading">
       <p class="eyebrow">${escape(labels.eyebrow)}</p>
       <h1>${escape(copy.pages.certificates)}</h1>
-      <p>${escape(labels.intro)}</p>
+      <p>${renderInline(labels.intro)}</p>
     </div>
     <section
       class="certificates-list"

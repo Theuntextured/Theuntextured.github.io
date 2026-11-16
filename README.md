@@ -1,19 +1,44 @@
 # Riccardo Giorgi — personal website
 
-Minimal bilingual static site. Requires Node.js 22+. Run `npm ci` once to install
-the build-time Markdown renderer and HTML sanitizer.
+Minimal bilingual static site. Requires Node.js 22+ and `pdflatex` (TeX Live).
+Run `npm ci` once to install the build-time Markdown renderer and HTML sanitizer.
+On Debian/Ubuntu, install LaTeX with
+`sudo apt install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-lang-italian lmodern`.
 
 ## Local preview
 
-Run `npm start`, then open http://localhost:3000. Restart after edits to rebuild.
+Run `npm start`, then open http://localhost:3000. Saving content, templates,
+styles or assets automatically rebuilds the site and refreshes open preview tabs.
+Changes to build scripts and LaTeX sources in `cv/` also trigger a rebuild. Build errors appear in the
+terminal; fix the error and save to retry. Live reload runs only in local preview.
 Run `npm run build` to generate `dist/` for static hosting, including GitHub Pages.
-Deployment is not configured yet.
+The GitHub Pages deployment workflow is described below.
+
+## GitHub Pages deployment
+
+`.github/workflows/pages.yml` builds this repository for
+`Theuntextured/Theuntextured.github.io`. Pushes to the default `master` branch
+build and deploy the website; pull requests targeting `master` run the same
+checks without deploying. The workflow can also be started manually; deployment
+is limited to the repository's default branch.
+
+In the repository's **Settings → Pages → Build and deployment**, select
+**GitHub Actions** as the source before the first deployment. The workflow
+installs Node.js 24, LaTeX with Italian language support and Poppler, runs
+`npm ci` and `npm run check`, then publishes only `dist/`. Both compiled CV
+PDFs are included. No personal access token or separate deployment branch is
+needed. The deployment job uses the `github-pages` environment and the built-in
+`GITHUB_TOKEN` with Pages and OIDC permissions.
+
+The workflow uses official GitHub actions pinned to verified commit revisions.
+See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Formatting and checks
 
 Run `npm run format` to format source files with Prettier and `npm run lint`
 to check JavaScript with ESLint. `npm run lint:fix` applies automatic lint fixes.
-Run `npm run check` to run lint, verify formatting and build all pages.
+Run `npm test` to check CV compilation, failure handling and inline Markdown rendering. Run `npm run check`
+to run lint, verify formatting, run tests and build all pages and the CV PDF.
 
 Use two spaces for indentation. HTML templates use `/* HTML */` comments so
 Prettier can format their markup too. Generated files, vendored D3 and upstream
@@ -21,13 +46,14 @@ icons are excluded from formatting; vendored code is excluded from linting.
 
 ## Editing guide
 
-- `src/content/it.json`: Italian page titles and placeholder copy.
-- `src/content/en.json`: English page titles and placeholder copy.
+- `src/content/it.json`: Italian page titles, home copy and PDF viewer labels.
+- `src/content/en.json`: English page titles, home copy and PDF viewer labels.
 - `src/site.mjs`: name, languages, page IDs and navigation order.
 - `src/layout.mjs`: shared HTML layout and navigation.
 - `src/assets/`: shared styles and future static assets.
 - `scripts/`: build and preview commands.
-- `cv/`: future LaTeX sources and PDF automation.
+- `cv/en.tex`, `cv/it.tex`: English and Italian printable CV content.
+- `cv/layout.tex`: shared A4 typography and layout for both CVs.
 - `dist/`: generated output; never edit or commit.
 
 Both /it/ and /en/ contain Home, Links, Competences & activities, Current projects,
@@ -38,7 +64,23 @@ To add a page, add its ID to src/site.mjs and its title to both content files.
 Navigation updates automatically. As real content is added, extend content
 entries and the shared layout; keep translated copy out of scripts.
 
-The example content uses bracketed writing prompts until real content is added.
+English content was initially populated from https://riccardogiorgi.tech/en/,
+its skills page and printable CV, then updated with personal project, badge
+and profile details. Italian content translates the current English material.
+Both languages use matching competence, activity, project and certificate
+entries. The Links page is maintained separately in `src/content/links-tree.json`.
+Content entries can specify `"languages": ["en"]` or `["it"]` to appear only
+in that language; omit `languages` for bilingual entries. Only the selected
+languages require translated fields. This applies to competences, activities,
+projects, certificates and nodes in the links tree.
+
+The printable CV pages at `/en/cv/` and `/it/cv/` embed PDFs compiled from
+`cv/en.tex` and `cv/it.tex` on every website build. Generated files are
+`dist/assets/cv/riccardo-giorgi-en.pdf` and
+`dist/assets/cv/riccardo-giorgi-it.pdf`. The pages include download and open
+links, plus a fallback for browsers without embedded PDF support. Viewer labels
+live in each language's JSON file, markup in `src/pages/cv.mjs` and styles in
+`src/assets/cv.css`. See `cv/README.md` for sources and editing details.
 
 ## Competences & activities
 
@@ -77,7 +119,23 @@ The reusable disclosure is in `src/components/content-card.mjs`, with shared
 card styles in `src/assets/content-card.css`; page markup is
 in `src/pages/competences.mjs`, with its page styles and switcher in
 `src/assets/competences.css` and `src/assets/competences.js`.
-Run `npm run build` after content edits to update the running local preview.
+The running local preview updates automatically after content edits.
+
+### Tool logos beside card titles
+
+Competence, activity, project and certificate entries accept an optional `logos`
+array, for example `"logos": ["cplusplus"]` or
+`"logos": ["stm32", "solidworks"]`. Logo IDs refer to
+`src/content/tool-logos.json`, which maps each ID to a local asset and readable
+label. Labels can be a shared string for tool names or an `en`/`it` object for
+translated descriptions. Omit `logos` when no particular tool is relevant.
+
+Logos appear at 32px to the left of the title, including when a card is collapsed.
+Mixed disciplines can display more than one logo; title text wraps independently.
+White backgrounds keep the original artwork visible in both color themes.
+The build rejects unknown or duplicate logo IDs and missing image files.
+Downloaded artwork and attribution files live in `src/assets/logos/`; see its
+README for original sources. The large content image remains a separate field.
 
 ## Current projects
 
@@ -120,7 +178,7 @@ Run `npm run check` after edits.
 
 Edit `src/content/certificates.json` to add, remove or reorder certificates.
 Each entry uses the same expandable card as the competences page, with a title,
-description, image and link. For example:
+description, optional image and link. For example:
 
 ```json
 {
@@ -139,22 +197,47 @@ description, image and link. For example:
 ```
 
 Use a unique lowercase `id` and provide both languages for the title,
-description and image description. Descriptions are plain text. Image paths
+description and image description. Descriptions support inline Markdown. Image paths
 are relative to `src/assets/`. The `href` can be a full HTTPS URL or a local
 asset path such as `certificates/my-certificate.pdf` (place the PDF inside
 `src/assets/certificates/`). Local links work when hosted under a subdirectory.
 The build checks translations, IDs, URLs and local files.
 
-Replace the bracketed example entry, placeholder illustration and example.com
-link with your real certificate details. An empty array displays a translated
+Both languages include the verified Maya credential and Big Global Challenges
+badge, with matching title icons. An empty array displays a translated
 empty state. Cards open independently and work without JavaScript.
 The reusable certificate block is in `src/components/certificate-card.mjs`;
 page markup and styles are in `src/pages/certificates.mjs` and
-`src/assets/certificates.css`. Run `npm run build` after edits.
+`src/assets/certificates.css`. The running local preview updates automatically.
 
 ## Home page
 
-Edit the home object in each language's content file to replace the bracketed writing prompts. Its items list controls the Currently rows and its links list controls the next-step links. Home-only markup lives in src/pages/home.mjs; shared navigation remains in src/layout.mjs. Styling uses named color variables at the top of src/assets/site.css.
+Edit the home object in each language's content file. Its items list controls the Currently rows and its links list controls the next-step links. Omit `projectAlt` to hide the stock project photo, and leave `portraitCaption` empty to omit the portrait caption. Home-only markup lives in src/pages/home.mjs; shared navigation remains in src/layout.mjs. Styling uses named color variables at the top of src/assets/site.css.
+
+### Inline links in JSON
+
+Use Markdown links directly inside supported prose fields, for example in
+`home.items[].text`:
+
+```json
+{
+  "label": "Learning",
+  "text": "Alongside my degree, I follow the [INTRAPRENDENTI](https://www.polito.it/didattica/polito-learning-experiences/learning-experiences-in-interdisciplinarity/percorso-intraprendenti) honours track."
+}
+```
+
+Inline Markdown works in the home headline, introduction, Currently introduction,
+item text and photo captions; competence/project/certificate introductions and
+empty states; certificate descriptions; and the CV viewer introduction and
+fallback message. Links, emphasis and inline code are rendered at build time
+using `src/inline-markdown.mjs`. HTML is escaped, images are not embedded, and
+unsafe link protocols are removed. HTTPS, HTTP, email, phone and relative links
+are supported. Use full HTTPS URLs or site-relative paths for predictable routing.
+
+Navigation, headings, labels, image alt text, links-tree entries and descriptions
+inside already clickable home cards remain plain text. Their dedicated `href`
+or `page` properties still control navigation. The printable LaTeX CV is edited
+separately and continues to print its URLs as text.
 
 ## Images and icons
 

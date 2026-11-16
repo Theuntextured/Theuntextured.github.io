@@ -2,4 +2,5 @@ dist/
 node_modules/
 src/assets/vendor/
 src/assets/icons/
+src/assets/logos/*.svg
 package-lock.json

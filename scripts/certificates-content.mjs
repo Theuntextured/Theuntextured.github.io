@@ -1,6 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import { resolve, relative, sep, isAbsolute } from 'node:path';
 import { languages } from '../src/site.mjs';
+import { contentLanguages } from './content-utils.mjs';
+import { loadLogos } from './content-logos.mjs';
 
 const assetsRoot = resolve('src/assets');
 async function asset(path) {
@@ -46,7 +48,9 @@ export async function loadCertificates() {
       throw new Error(`Invalid or duplicate certificate ID: ${item.id}`);
     }
     ids.add(item.id);
-    await asset(item.image?.src);
+    if (item.image) {
+      await asset(item.image.src);
+    }
     if (typeof item.href !== 'string' || !item.href.trim()) {
       throw new Error(`Missing certificate link: ${item.id}`);
     }
@@ -65,23 +69,27 @@ export async function loadCertificates() {
       }
       await asset(item.href);
     }
-    for (const lang of languages) {
+    for (const lang of contentLanguages(item)) {
+      const logos = await loadLogos(item, lang);
       result[lang].push({
         id: item.id,
+        logos,
         title: translation(item.title, lang, `${item.id} title`),
         description: translation(
           item.description,
           lang,
           `${item.id} description`,
         ),
-        image: {
-          src: item.image.src,
-          alt: translation(
-            item.image.alt,
-            lang,
-            `${item.id} image description`,
-          ),
-        },
+        image: item.image
+          ? {
+              src: item.image.src,
+              alt: translation(
+                item.image.alt,
+                lang,
+                `${item.id} image description`,
+              ),
+            }
+          : null,
         href: item.href,
       });
     }

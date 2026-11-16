@@ -111,6 +111,22 @@ h2 {
   color: var(--muted);
   font-size: 1.05rem;
 }
+.intro-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-top: 1.25rem;
+}
+.intro-details dt {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+.intro-details dd {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
 .currently {
   display: grid;
   grid-template-columns: 1fr 1.7fr;

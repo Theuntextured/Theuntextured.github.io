@@ -2,9 +2,23 @@ import { readFile } from 'node:fs/promises';
 import { resolve, relative, sep } from 'node:path';
 import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
+import { languages } from '../src/site.mjs';
 
 export const contentRoot = resolve('src/content');
 export const assetsRoot = resolve('src/assets');
+
+export function contentLanguages(item) {
+  const selected = item.languages ?? languages;
+  if (
+    !Array.isArray(selected) ||
+    !selected.length ||
+    new Set(selected).size !== selected.length ||
+    selected.some((lang) => !languages.includes(lang))
+  ) {
+    throw new Error(`Invalid content languages: ${item.id}`);
+  }
+  return selected;
+}
 
 export function localFile(root, path, extension) {
   if (typeof path !== 'string' || !path || path.includes('\\')) {

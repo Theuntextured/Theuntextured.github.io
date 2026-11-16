@@ -1,7 +1,9 @@
-[Descrivi come affronti un problema nuovo, cerchi possibili soluzioni e verifichi i risultati.]
+Affronto i problemi tecnici analizzando i sistemi, suddividendo le difficoltà in parti gestibili e cercando soluzioni efficienti. La logica e il metodo guidano sia gli studi di ingegneria sia il mio lavoro di programmazione.
 
-#### Un esempio
+#### Nella pratica
 
-1. [Presenta il problema e i suoi vincoli.]
-2. [Spiega l'approccio scelto e il perché.]
-3. [Descrivi il risultato e cosa hai imparato.]
+- **Ingegneria:** progettazione strutturale e analisi agli elementi finiti con il Team Icarus, dalla preparazione dei modelli alla generazione della mesh, all’applicazione dei carichi e all’analisi dei risultati.
+- **Software:** sviluppo in C++ e Unreal Engine orientato alle prestazioni, integrazione e affidabilità in produzione.
+- **Comunicazione:** spiegazione delle basi della programmazione a bambini e genitori come tutor a distanza presso Kodland.
+
+Il lavoro nel gruppo multidisciplinare APA mi ha inoltre aiutato a sviluppare la capacità di coordinare attività condivise e comunicare idee tecniche.

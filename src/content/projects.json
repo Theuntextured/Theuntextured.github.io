@@ -1,18 +1,38 @@
 [
   {
-    "id": "current-project",
-    "title": { "en": "[Project title]", "it": "[Titolo del progetto]" },
+    "id": "team-icarus-apa",
+    "title": {
+      "en": "Team Icarus — Advanced Propulsion Aircraft & Firmware",
+      "it": "Team Icarus — Advanced Propulsion Aircraft e Firmware"
+    },
     "body": {
-      "en": "projects/current-project.en.md",
-      "it": "projects/current-project.it.md"
+      "en": "projects/team-icarus-apa.en.md",
+      "it": "projects/team-icarus-apa.it.md"
     },
-    "image": {
-      "src": "images/project-placeholder.jpg",
-      "alt": {
-        "en": "Temporary stock photo of a laptop and workspace",
-        "it": "Foto provvisoria di un computer e una postazione di lavoro"
-      }
+    "href": "https://icarus.polito.it/apa-2025/",
+    "logos": ["stm32", "solidworks"]
+  },
+  {
+    "id": "survival-automation-game",
+    "title": {
+      "en": "Survival & automation game",
+      "it": "Videogioco di sopravvivenza e automazione"
     },
-    "href": "https://example.com/project"
+    "body": {
+      "en": "projects/survival-automation-game.en.md",
+      "it": "projects/survival-automation-game.it.md"
+    },
+    "logos": ["unrealengine"]
+  },
+  {
+    "id": "online-chess",
+    "title": {
+      "en": "Learning & playing online chess",
+      "it": "Imparare e giocare a scacchi online"
+    },
+    "body": {
+      "en": "projects/online-chess.en.md",
+      "it": "projects/online-chess.it.md"
+    }
   }
 ]

@@ -8,7 +8,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run lint && npm run format:check && npm run build"
+    "test": "node --test scripts/*.test.mjs",
+    "check": "npm run lint && npm run format:check && npm test && npm run build"
   },
   "dependencies": {
     "marked": "^18.2.0",

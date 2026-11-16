@@ -1,4 +1,5 @@
 import { name } from '../site.mjs';
+import { renderInline } from '../inline-markdown.mjs';
 
 // Home-only markup. All editable copy lives in src/content/{language}.json.
 export function renderHome(home, url, escape) {
@@ -19,7 +20,16 @@ export function renderHome(home, url, escape) {
           <dt>
             ${icon(['graduation-cap', 'wrench', 'compass'][index % 3])}${escape(item.label)}
           </dt>
-          <dd class="placeholder">${escape(item.text)}</dd>
+          <dd>${renderInline(item.text)}</dd>
+        </div>`,
+    )
+    .join('');
+  const details = (home.details || [])
+    .map(
+      (item) =>
+        /* HTML */ `<div>
+          <dt>${escape(item.label)}</dt>
+          <dd>${escape(item.text)}</dd>
         </div>`,
     )
     .join('');
@@ -42,34 +52,39 @@ export function renderHome(home, url, escape) {
       <div class="intro-text">
         <p class="eyebrow">${escape(home.eyebrow)}</p>
         <h1 id="intro-title">${name}<span class="accent">.</span></h1>
-        <p class="intro-headline placeholder">${escape(home.headline)}</p>
-        <p class="intro-copy placeholder">${escape(home.intro)}</p>
+        <p class="intro-headline">${renderInline(home.headline)}</p>
+        <p class="intro-copy">${renderInline(home.intro)}</p>
+        ${details ? /* HTML */ `<dl class="intro-details">${details}</dl>` : ''}
       </div>
       <figure class="portrait">
         <img
-          src="${asset('images/portrait-placeholder.jpg')}"
+          src="${asset('images/portrait.png')}"
           width="640"
           height="800"
           alt="${escape(home.portraitAlt)}"
           fetchpriority="high"
         />
-        <figcaption>${icon('image')}${escape(home.portraitCaption)}</figcaption>
+        ${home.portraitCaption ? /* HTML */ `<figcaption>${icon('image')}${renderInline(home.portraitCaption)}</figcaption>` : ''}
       </figure>
     </section>
     <section class="currently" aria-labelledby="currently-title">
       <div class="section-heading">
         <h2 id="currently-title">${escape(home.nowTitle)}</h2>
-        <p>${escape(home.nowIntro)}</p>
-        <figure class="project-photo">
-          <img
-            src="${asset('images/project-placeholder.jpg')}"
-            width="1000"
-            height="600"
-            alt="${escape(home.projectAlt)}"
-            loading="lazy"
-          />
-          <figcaption>${escape(home.projectCaption)}</figcaption>
-        </figure>
+        <p>${renderInline(home.nowIntro)}</p>
+        ${
+          home.projectAlt
+            ? /* HTML */ `<figure class="project-photo">
+                <img
+                  src="${asset('images/project-placeholder.jpg')}"
+                  width="1000"
+                  height="600"
+                  alt="${escape(home.projectAlt)}"
+                  loading="lazy"
+                />
+                <figcaption>${renderInline(home.projectCaption)}</figcaption>
+              </figure>`
+            : ''
+        }
       </div>
       <dl class="current-list">${currentItems}</dl>
     </section>

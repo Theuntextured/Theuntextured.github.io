@@ -1,45 +1,133 @@
 {
   "competences": [
     {
+      "id": "modelling-design",
+      "title": {
+        "en": "3D modelling & design",
+        "it": "Modellazione e progettazione 3D"
+      },
+      "body": {
+        "en": "competences/modelling-design.en.md",
+        "it": "competences/modelling-design.it.md"
+      },
+      "logos": ["maya", "blender"]
+    },
+    {
+      "id": "engineering-tools",
+      "title": {
+        "en": "Engineering design & analysis",
+        "it": "Progettazione e analisi ingegneristica"
+      },
+      "body": {
+        "en": "competences/engineering-tools.en.md",
+        "it": "competences/engineering-tools.it.md"
+      },
+      "logos": ["solidworks"]
+    },
+    {
       "id": "software-development",
-      "title": { "en": "Software development", "it": "Sviluppo software" },
+      "title": {
+        "en": "Software development",
+        "it": "Sviluppo software"
+      },
       "body": {
         "en": "competences/software-development.en.md",
         "it": "competences/software-development.it.md"
-      }
+      },
+      "logos": ["cplusplus"]
     },
     {
       "id": "problem-solving",
-      "title": { "en": "Problem solving", "it": "Risoluzione dei problemi" },
+      "title": {
+        "en": "Problem solving",
+        "it": "Risoluzione dei problemi"
+      },
       "body": {
         "en": "competences/problem-solving.en.md",
         "it": "competences/problem-solving.it.md"
+      }
+    },
+    {
+      "id": "languages",
+      "title": {
+        "en": "Languages",
+        "it": "Lingue"
+      },
+      "body": {
+        "en": "competences/languages.en.md",
+        "it": "competences/languages.it.md"
       }
     }
   ],
   "activities": [
     {
-      "id": "personal-projects",
-      "title": { "en": "Personal projects", "it": "Progetti personali" },
-      "image": {
-        "src": "images/project-placeholder.jpg",
-        "alt": {
-          "en": "Temporary stock photo of a laptop and workspace",
-          "it": "Foto provvisoria di un computer e una postazione di lavoro"
-        }
-      },
-      "body": {
-        "en": "activities/personal-projects.en.md",
-        "it": "activities/personal-projects.it.md"
-      }
-    },
-    {
       "id": "education",
-      "title": { "en": "Education & learning", "it": "Formazione e studio" },
+      "title": {
+        "en": "Education & qualifications",
+        "it": "Formazione e qualifiche"
+      },
       "body": {
         "en": "activities/education.en.md",
         "it": "activities/education.it.md"
       }
+    },
+    {
+      "id": "team-icarus",
+      "title": {
+        "en": "Structures & Firmware Team Member — Team Icarus — Advanced Propulsion Aircraft",
+        "it": "Membro dei gruppi Strutture e Firmware — Team Icarus — Advanced Propulsion Aircraft"
+      },
+      "body": {
+        "en": "activities/team-icarus.en.md",
+        "it": "activities/team-icarus.it.md"
+      },
+      "logos": ["stm32", "solidworks"]
+    },
+    {
+      "id": "software-developer",
+      "title": {
+        "en": "Part-time Software Developer — TBJBU2 Ltd",
+        "it": "Sviluppatore software part-time — TBJBU2 Ltd"
+      },
+      "body": {
+        "en": "activities/software-developer.en.md",
+        "it": "activities/software-developer.it.md"
+      },
+      "logos": ["cplusplus", "unrealengine"]
+    },
+    {
+      "id": "programming-tutor",
+      "title": {
+        "en": "Programming Tutor — Kodland",
+        "it": "Tutor di programmazione — Kodland"
+      },
+      "body": {
+        "en": "activities/programming-tutor.en.md",
+        "it": "activities/programming-tutor.it.md"
+      }
+    },
+    {
+      "id": "hospitality",
+      "title": {
+        "en": "Waiter — Monica Li",
+        "it": "Cameriere — Monica Li"
+      },
+      "body": {
+        "en": "activities/hospitality.en.md",
+        "it": "activities/hospitality.it.md"
+      }
+    },
+    {
+      "id": "game-development",
+      "title": {
+        "en": "Personal projects — games & Unreal Engine",
+        "it": "Progetti personali — videogiochi e Unreal Engine"
+      },
+      "body": {
+        "en": "activities/personal-projects.en.md",
+        "it": "activities/personal-projects.it.md"
+      },
+      "logos": ["unrealengine"]
     }
   ]
 }

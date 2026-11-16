@@ -1,5 +1,18 @@
 // Semantic list and interactive graph share one validated JSON source.
 export function renderLinks(tree, copy, lang, url, escape, root) {
+  const localize = (node) => ({
+    ...node,
+    ...(node.children
+      ? {
+          children: node.children
+            .filter(
+              (child) => !child.languages || child.languages.includes(lang),
+            )
+            .map(localize),
+        }
+      : {}),
+  });
+  tree = localize(tree);
   const label = (node) => escape(node.name[lang]);
   const icon = (node) =>
     /* HTML */ `<img

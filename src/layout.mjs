@@ -4,6 +4,7 @@ import { renderLinks } from './pages/links.mjs';
 import { renderCompetences } from './pages/competences.mjs';
 import { renderCertificates } from './pages/certificates.mjs';
 import { renderProjects } from './pages/projects.mjs';
+import { renderCV } from './pages/cv.mjs';
 
 const escape = (value) =>
   value
@@ -16,6 +17,7 @@ const pageStyles = {
   competences: ['content-card.css', 'competences.css'],
   certificates: ['content-card.css', 'certificates.css'],
   projects: ['content-card.css', 'projects.css'],
+  cv: ['cv.css'],
 };
 
 const pageClasses = {
@@ -24,6 +26,7 @@ const pageClasses = {
   competences: 'competences-page',
   certificates: 'certificates-page',
   projects: 'projects-page',
+  cv: 'cv-page',
 };
 
 export function render(
@@ -66,12 +69,18 @@ export function render(
     case 'projects':
       content = renderProjects(projects, copy, escape, root);
       break;
+    case 'cv':
+      content = copy.cv
+        ? renderCV(copy.cv, escape, root, lang)
+        : /* HTML */ `<h1>${escape(copy.pages.cv)}</h1>
+            <p>${escape(copy.placeholder)}</p>`;
+      break;
     default:
       content = /* HTML */ `<h1>${escape(copy.pages[page])}</h1>
         <p>${escape(copy.placeholder)}</p>`;
   }
 
-  const styles = (pageStyles[page] || [])
+  const styles = (page === 'cv' && !copy.cv ? [] : pageStyles[page] || [])
     .map(
       (file) =>
         /* HTML */ `<link rel="stylesheet" href="${root}assets/${file}" />`,
@@ -152,7 +161,12 @@ export function render(
             </button>
           </div>
         </header>
-        <main id="main" class="${pageClasses[page] || 'stub'}">${content}</main>
+        <main
+          id="main"
+          class="${page === 'cv' && !copy.cv ? 'stub' : pageClasses[page] || 'stub'}"
+        >
+          ${content}
+        </main>
       </body>
     </html>`;
 }

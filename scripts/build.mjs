@@ -4,6 +4,8 @@ import { render } from '../src/layout.mjs';
 import { loadCompetences } from './competences-content.mjs';
 import { loadCertificates } from './certificates-content.mjs';
 import { loadProjects } from './projects-content.mjs';
+import { contentLanguages } from './content-utils.mjs';
+import { buildCV } from './build-cv.mjs';
 
 const competences = await loadCompetences();
 const certificates = await loadCertificates();
@@ -20,7 +22,7 @@ async function validate(node) {
     throw new Error('Invalid icon name');
   }
   await readFile(`src/assets/icons/${node.icon}.svg`);
-  for (const lang of languages) {
+  for (const lang of contentLanguages(node)) {
     if (!node.name?.[lang]) {
       throw new Error(`Missing ${lang} name: ${node.id}`);
     }
@@ -42,7 +44,7 @@ async function validate(node) {
     if (node.href && !/^(https?:\/\/|mailto:|tel:)/i.test(node.href)) {
       throw new Error('Unsupported link protocol');
     }
-    for (const lang of languages) {
+    for (const lang of contentLanguages(node)) {
       if (!node.description?.[lang]) {
         throw new Error('Missing leaf description');
       }
@@ -55,6 +57,9 @@ for (const lang of languages) {
   const copy = JSON.parse(
     await readFile('src/content/' + lang + '.json', 'utf8'),
   );
+  if (copy.cv) {
+    await buildCV(lang);
+  }
   for (const page of pages) {
     const directory =
       'dist/' + lang + '/' + (page === 'home' ? '' : page + '/');

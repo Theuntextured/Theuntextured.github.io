@@ -19,38 +19,47 @@
   },
   "projects": {
     "eyebrow": "Work in progress",
-    "intro": "What I’m building and exploring right now. Open a title to see the details and next steps.",
+    "intro": "What I'm building, learning and spending time on.",
     "view": "View project",
     "empty": "Project updates coming soon."
   },
   "certificates": {
     "eyebrow": "Learning & qualifications",
-    "intro": "Open a title to see the details and view the certificate.",
+    "intro": "Academic badges and training certificates. Open a title to read more and verify the credential.",
     "view": "View certificate",
     "empty": "New certificates coming soon."
   },
-  "placeholder": "Content coming soon.",
   "navigation": "Main navigation",
   "language": "Language",
   "skip": "Skip to content",
   "home": {
     "eyebrow": "A little about me",
-    "headline": "[Your role, interests & what drives you.]",
-    "intro": "[Introduce yourself in two or three sentences: what you study or do, what you enjoy building or understanding, and one thing that makes your approach yours.]",
+    "headline": "Mechanical Engineering student at Politecnico di Torino",
+    "intro": "Mechanical engineering student at Politecnico di Torino, studying in the English-taught programme and seeking internships in mechanical and structural engineering. I use programming and 3D modelling to support design, simulation and technical problem solving. I learn quickly and work well in teams that value logic, structure and clear communication.",
+    "details": [
+      {
+        "label": "Driving licences",
+        "text": "AM, B"
+      },
+      {
+        "label": "Italian VAT number",
+        "text": "13339980016"
+      }
+    ],
     "nowTitle": "Currently",
-    "nowIntro": "A snapshot of what I’m spending my time on.",
+    "nowIntro": "A snapshot of what I'm spending my time on.",
     "items": [
       {
         "label": "Learning",
-        "text": "[What are you studying or exploring? Mention your course, a topic, or a skill you’re developing.]"
+        "text": "Mechanical Engineering at Politecnico di Torino, alongside the [INTRAPRENDENTI](https://www.polito.it/didattica/polito-learning-experiences/learning-experiences-in-interdisciplinarity/percorso-intraprendenti) interdisciplinary honours track. I prefer to use C++, Python and MATLAB for university work and technical projects."
       },
       {
         "label": "Making",
-        "text": "[Introduce one project or activity you’re involved in, your contribution, and why it interests you.]"
+        "text": "Structural design and analysis with [Team Icarus on the Advanced Propulsion Aircraft](https://icarus.polito.it/apa-2025/) project, using SolidWorks, HyperMesh and HyperView. Additionally, I'm part of the [Firmware (IT)](https://icarus.polito.it/it-2025/) section in Team Icarus, where we use [FreeRTOS](https://www.freertos.org/) on [STM32 microcontrollers](https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html) to develop proprietary flight control and telemetry systems in C."
       },
       {
         "label": "Looking ahead",
-        "text": "[What would you like to try next? Describe an opportunity, a problem, or a field you’d like to explore.]"
+        "text": "Seeking mechanical and structural engineering internships, with availability for internships and travel within Italy and the EU, and preference for Turin."
       }
     ],
     "exploreTitle": "Get to know me",
@@ -71,10 +80,8 @@
         "description": "Profiles & ways to get in touch"
       }
     ],
-    "portraitAlt": "Temporary stock portrait, not Riccardo Giorgi",
-    "portraitCaption": "[Replace with your photo]",
-    "projectAlt": "Temporary stock photo of a laptop and workspace",
-    "projectCaption": "[Add a photo of a project or activity]"
+    "portraitAlt": "Portrait of Riccardo Giorgi",
+    "portraitCaption": ""
   },
   "theme": {
     "light": "",
@@ -90,10 +97,18 @@
     "reset": "Reset layout",
     "list": "Browse as a list",
     "graph": "Interactive links tree",
-    "placeholder": "Some external links are examples. Replace them in the JSON file.",
     "zoomIn": "Zoom in",
     "zoomOut": "Zoom out",
     "textView": "Text view",
     "treeView": "Tree view"
+  },
+  "cv": {
+    "eyebrow": "Curriculum vitae",
+    "title": "Printable CV",
+    "intro": "Read my CV below. Use the PDF toolbar to print, or download a copy.",
+    "download": "Download PDF",
+    "open": "Open PDF in a new tab",
+    "pdfTitle": "Riccardo Giorgi — English curriculum vitae",
+    "fallback": "Your browser cannot display the PDF here."
   }
 }

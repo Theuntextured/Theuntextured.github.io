@@ -1,7 +1,9 @@
-[Describe how you approach an unfamiliar problem, investigate possible solutions and check your results.]
+I approach technical problems by analysing systems, breaking issues into manageable parts and looking for efficient solutions. Logic and structure guide both my engineering studies and my programming work.
 
-#### An example
+#### In practice
 
-1. [Introduce the problem and its constraints.]
-2. [Explain the approach you chose and why.]
-3. [Describe the result and what you learned.]
+- **Engineering:** structural design and FEA work with Team Icarus, including model preparation, meshing, loads and post-processing.
+- **Software:** performance-oriented C++ and Unreal Engine development, integration and production reliability.
+- **Communication:** explaining programming fundamentals to children and parents as a remote tutor at Kodland.
+
+Working within the multidisciplinary APA team has also developed my ability to coordinate shared tasks and communicate technical ideas.

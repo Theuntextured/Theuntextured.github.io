@@ -1,12 +1,14 @@
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { languages } from '../src/site.mjs';
+import { loadLogos } from './content-logos.mjs';
 import {
   contentRoot,
   assetsRoot,
   localFile,
   translation,
   readMarkdown,
+  contentLanguages,
 } from './content-utils.mjs';
 
 export async function loadCompetences() {
@@ -30,7 +32,8 @@ export async function loadCompetences() {
       if (item.image) {
         await readFile(localFile(assetsRoot, item.image.src));
       }
-      for (const lang of languages) {
+      for (const lang of contentLanguages(item)) {
+        const logos = await loadLogos(item, lang);
         const title = translation(item.title, lang, `${item.id} title`);
         const body = translation(item.body, lang, `${item.id} Markdown path`);
         if (!body.startsWith(`${group}/`)) {
@@ -41,6 +44,7 @@ export async function loadCompetences() {
           id: item.id,
           title,
           html,
+          logos,
           image: item.image
             ? {
                 src: item.image.src,

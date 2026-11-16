@@ -1,4 +1,5 @@
 import { renderContentCard } from '../components/content-card.mjs';
+import { renderInline } from '../inline-markdown.mjs';
 
 export function renderCompetences(groups, copy, escape, root) {
   const labels = copy.competences;
@@ -24,7 +25,7 @@ export function renderCompetences(groups, copy, escape, root) {
     .map(([group, items]) => {
       const cards = items.length
         ? items.map((item) => renderContentCard(item, escape, root)).join('')
-        : /* HTML */ `<p>${escape(labels.empty)}</p>`;
+        : /* HTML */ `<p>${renderInline(labels.empty)}</p>`;
 
       return /* HTML */ `
         <section
@@ -34,7 +35,7 @@ export function renderCompetences(groups, copy, escape, root) {
         >
           <div class="content-group-heading">
             <h2 id="heading-${group}">${escape(labels[group])}</h2>
-            <p>${escape(labels[`${group}Intro`])}</p>
+            <p>${renderInline(labels[`${group}Intro`])}</p>
           </div>
           <div class="content-cards">${cards}</div>
         </section>
@@ -46,7 +47,7 @@ export function renderCompetences(groups, copy, escape, root) {
     <div class="competences-heading">
       <p class="eyebrow">${escape(labels.eyebrow)}</p>
       <h1>${escape(copy.pages.competences)}</h1>
-      <p>${escape(labels.intro)}</p>
+      <p>${renderInline(labels.intro)}</p>
     </div>
     <div
       class="group-switcher"

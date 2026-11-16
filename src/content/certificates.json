@@ -1,18 +1,35 @@
 [
   {
-    "id": "example-certificate",
-    "title": { "en": "[Certificate title]", "it": "[Titolo del certificato]" },
+    "id": "autodesk-maya",
+    "title": {
+      "en": "Autodesk Maya — Car Design",
+      "it": "Autodesk Maya — Car Design"
+    },
     "description": {
-      "en": "[Describe the course or qualification, its issuer, when you earned it, and the skills it recognises. Replace the example link with your certificate URL or a local PDF.]",
-      "it": "[Descrivi il corso o la qualifica, l’ente che lo ha rilasciato, quando lo hai ottenuto e le competenze riconosciute. Sostituisci il link di esempio con l’URL del certificato o un PDF locale.]"
+      "en": "Completed the remote Car Design course at Istituto Volta on 17 April 2025, covering car design concepts and advanced 3D modelling techniques. The Autodesk Maya credential can be verified through the linked Credly badge.",
+      "it": "Ho completato il corso di Car Design a distanza dell’Istituto Volta il 17 aprile 2025, approfondendo i concetti della progettazione automobilistica e le tecniche avanzate di modellazione 3D. La certificazione Autodesk Maya è verificabile tramite il badge Credly collegato."
+    },
+    "href": "https://www.credly.com/badges/286b9940-d45e-47c7-855e-a76377268bc5/",
+    "logos": ["autodesk-maya-certificate"]
+  },
+  {
+    "id": "big-global-challenges",
+    "title": {
+      "en": "Big Global Challenges — Multidisciplinary Skills for Emerging Challenges",
+      "it": "Grandi Sfide Globali — Competenze multidisciplinari per le sfide emergenti"
+    },
+    "description": {
+      "en": "Issued by Politecnico di Torino on 22 July 2026. Recognises skills developed through the Big Global Challenges programme, combining STEM with the humanities and social sciences to address complex technological, social and environmental challenges. Covers critical thinking, multidisciplinary teamwork, responsible design and sustainable problem solving.",
+      "it": "Rilasciato dal Politecnico di Torino il 22 luglio 2026. Attesta le competenze sviluppate nel percorso Grandi Sfide Globali, che integra le discipline STEM con le scienze umane e sociali per affrontare sfide tecnologiche, sociali e ambientali complesse. Comprende pensiero critico, collaborazione multidisciplinare, progettazione responsabile e risoluzione sostenibile dei problemi."
     },
     "image": {
-      "src": "images/certificate-placeholder.svg",
+      "src": "images/big-global-challenges-badge.png",
       "alt": {
-        "en": "Placeholder certificate illustration",
-        "it": "Illustrazione segnaposto di un certificato"
+        "en": "Official Big Global Challenges badge from Politecnico di Torino",
+        "it": "Badge ufficiale Grandi Sfide Globali del Politecnico di Torino"
       }
     },
-    "href": "https://example.com/certificate"
+    "href": "https://bestr.it/award/show/NZdQ4dvER7mbhSBRxjHZKA?ln=en",
+    "logos": ["big-global-challenges"]
   }
 ]

@@ -48,7 +48,7 @@
             "it": "Progetti in corso"
           },
           "description": {
-            "en": "What I’m working on now",
+            "en": "What I'm working on now",
             "it": "A cosa sto lavorando in questo periodo"
           },
           "page": "projects"
@@ -90,30 +90,82 @@
       },
       "children": [
         {
-          "id": "code",
+          "id": "github-profile",
           "icon": "link",
           "name": {
-            "en": "Code profile",
-            "it": "Profilo di sviluppo"
+            "en": "GitHub",
+            "it": "GitHub"
           },
           "description": {
-            "en": "[Replace with your GitHub URL]",
-            "it": "[Inserisci il tuo URL GitHub]"
+            "en": "Code and personal projects",
+            "it": "Codice e progetti personali"
           },
-          "href": "https://example.com/#github"
+          "href": "https://github.riccardogiorgi.tech"
         },
         {
-          "id": "professional",
+          "id": "linkedin-profile",
           "icon": "link",
           "name": {
-            "en": "Professional profile",
-            "it": "Profilo professionale"
+            "en": "LinkedIn",
+            "it": "LinkedIn"
           },
           "description": {
-            "en": "[Replace with your LinkedIn URL]",
-            "it": "[Inserisci il tuo URL LinkedIn]"
+            "en": "Education and professional experience",
+            "it": "Formazione ed esperienze professionali"
           },
-          "href": "https://example.com/#linkedin"
+          "href": "https://www.linkedin.com/in/riccardo-giorgi-67b1b2240/"
+        },
+        {
+          "id": "fab-publications",
+          "icon": "link",
+          "name": {
+            "en": "FAB",
+            "it": "FAB"
+          },
+          "description": {
+            "en": "Unreal Engine publications",
+            "it": "Pubblicazioni per Unreal Engine"
+          },
+          "href": "https://www.fab.com/sellers/The%20untextured%20Dev"
+        },
+        {
+          "id": "maya-credential",
+          "icon": "graduation-cap",
+          "name": {
+            "en": "Maya credential",
+            "it": "Certificazione Maya"
+          },
+          "description": {
+            "en": "Verify my Autodesk Maya certification",
+            "it": "Verifica la mia certificazione Autodesk Maya"
+          },
+          "href": "https://www.credly.com/badges/286b9940-d45e-47c7-855e-a76377268bc5/"
+        },
+        {
+          "id": "icarus-project",
+          "icon": "wrench",
+          "name": {
+            "en": "Team Icarus",
+            "it": "Team Icarus"
+          },
+          "description": {
+            "en": "Advanced Propulsion Aircraft and firmware",
+            "it": "Progetto Advanced Propulsion Aircraft e firmware"
+          },
+          "href": "https://icarus.polito.it/"
+        },
+        {
+          "id": "game-jam",
+          "icon": "link",
+          "name": {
+            "en": "Unintended Upgrades",
+            "it": "Unintended Upgrades"
+          },
+          "description": {
+            "en": "Game jam project",
+            "it": "Progetto per una game jam"
+          },
+          "href": "https://the-untextured.itch.io/unintended-upgrades"
         }
       ]
     },
@@ -126,30 +178,30 @@
       },
       "children": [
         {
-          "id": "email",
+          "id": "email-contact",
           "icon": "mail",
           "name": {
             "en": "Email",
             "it": "Email"
           },
           "description": {
-            "en": "[Replace with your mailto: address]",
-            "it": "[Inserisci il tuo indirizzo mailto:]"
+            "en": "riccardogiorgi29@gmail.com",
+            "it": "riccardogiorgi29@gmail.com"
           },
-          "href": "https://example.com/#email"
+          "href": "mailto:riccardogiorgi29@gmail.com"
         },
         {
-          "id": "other",
+          "id": "phone-contact",
           "icon": "link",
           "name": {
-            "en": "Another way to say hello",
-            "it": "Un altro modo per salutarmi"
+            "en": "Phone",
+            "it": "Telefono"
           },
           "description": {
-            "en": "[Add your preferred contact method]",
-            "it": "[Aggiungi il tuo contatto preferito]"
+            "en": "+39 371 387 0042",
+            "it": "+39 371 387 0042"
           },
-          "href": "https://example.com/#contact"
+          "href": "tel:+393713870042"
         }
       ]
     }

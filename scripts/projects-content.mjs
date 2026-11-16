@@ -1,10 +1,12 @@
 import { readFile } from 'node:fs/promises';
 import { languages } from '../src/site.mjs';
+import { loadLogos } from './content-logos.mjs';
 import {
   assetsRoot,
   localFile,
   readMarkdown,
   translation,
+  contentLanguages,
 } from './content-utils.mjs';
 
 export async function loadProjects() {
@@ -39,7 +41,8 @@ export async function loadProjects() {
       }
     }
 
-    for (const lang of languages) {
+    for (const lang of contentLanguages(item)) {
+      const logos = await loadLogos(item, lang);
       const body = translation(item.body, lang, `${item.id} Markdown path`);
       if (!body.startsWith('projects/')) {
         throw new Error(`${item.id} body must be in projects/`);
@@ -48,6 +51,7 @@ export async function loadProjects() {
         id: item.id,
         title: translation(item.title, lang, `${item.id} title`),
         html: await readMarkdown(body),
+        logos,
         image: item.image
           ? {
               src: item.image.src,

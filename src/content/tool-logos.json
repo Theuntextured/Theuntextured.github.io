@@ -1,0 +1,40 @@
+{
+  "unrealengine": {
+    "src": "logos/unrealengine.svg",
+    "label": "Unreal Engine"
+  },
+  "cplusplus": {
+    "src": "logos/cplusplus.svg",
+    "label": "C++"
+  },
+  "stm32": {
+    "src": "logos/stm32.svg",
+    "label": "STM32"
+  },
+  "solidworks": {
+    "src": "logos/solidworks.svg",
+    "label": "SolidWorks"
+  },
+  "maya": {
+    "src": "logos/maya.svg",
+    "label": "Autodesk Maya"
+  },
+  "autodesk-maya-certificate": {
+    "src": "images/autodesk-maya-certificate.png",
+    "label": {
+      "en": "Autodesk Maya certification badge",
+      "it": "Badge di certificazione Autodesk Maya"
+    }
+  },
+  "blender": {
+    "src": "logos/blender.svg",
+    "label": "Blender"
+  },
+  "big-global-challenges": {
+    "src": "images/big-global-challenges-badge.png",
+    "label": {
+      "en": "Big Global Challenges badge",
+      "it": "Badge Grandi Sfide Globali"
+    }
+  }
+}
