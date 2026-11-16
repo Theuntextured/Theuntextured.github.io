@@ -30,6 +30,10 @@ PDFs are included. No personal access token or separate deployment branch is
 needed. The deployment job uses the `github-pages` environment and the built-in
 `GITHUB_TOKEN` with Pages and OIDC permissions.
 
+The custom domain is `riccardogiorgi.tech`. Set it in **Settings → Pages →
+Custom domain**; the workflow deploys to the domain configured there. Actions
+deployments do not use a repository `CNAME` file to configure the domain.
+
 The workflow uses official GitHub actions pinned to verified commit revisions.
 See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
