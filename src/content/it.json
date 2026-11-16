@@ -1,0 +1,114 @@
+{
+  "pages": {
+    "home": "Home",
+    "links": "Link",
+    "competences": "Competenze e attività",
+    "projects": "Progetti in corso",
+    "certificates": "Certificati",
+    "cv": "CV stampabile"
+  },
+  "competences": {
+    "eyebrow": "Competenze ed esperienze",
+    "intro": "Esplora le competenze o le esperienze. Apri un titolo per saperne di più.",
+    "groupBy": "Raggruppa per",
+    "competences": "Competenze",
+    "activities": "Esperienze",
+    "competencesIntro": "Conoscenze, strumenti e metodi di lavoro.",
+    "activitiesIntro": "Progetti, studi ed esperienze pratiche.",
+    "empty": "Nuovi contenuti in arrivo."
+  },
+  "projects": {
+    "eyebrow": "Lavori in corso",
+    "intro": "Cosa realizzo, cosa imparo e a cosa dedico il mio tempo.",
+    "view": "Visita il progetto",
+    "empty": "Aggiornamenti sui progetti in arrivo."
+  },
+  "certificates": {
+    "eyebrow": "Formazione e qualifiche",
+    "intro": "Badge accademici e certificati di formazione. Apri un titolo per leggere i dettagli e verificare la credenziale.",
+    "view": "Visualizza il certificato",
+    "empty": "Nuovi certificati in arrivo."
+  },
+  "navigation": "Navigazione principale",
+  "language": "Lingua",
+  "skip": "Vai al contenuto",
+  "home": {
+    "eyebrow": "Qualcosa su di me",
+    "headline": "Studente di Ingegneria Meccanica al Politecnico di Torino",
+    "intro": "Studio Ingegneria Meccanica al Politecnico di Torino, nel corso erogato in inglese, e cerco un tirocinio in ambito meccanico o strutturale. Uso la programmazione e la modellazione 3D a supporto della progettazione, della simulazione e della risoluzione di problemi tecnici. Imparo rapidamente e lavoro bene nei gruppi che danno valore alla logica, al metodo e a una comunicazione chiara.",
+    "details": [
+      {
+        "label": "Patenti di guida",
+        "text": "AM, B"
+      },
+      {
+        "label": "Partita IVA",
+        "text": "13339980016"
+      }
+    ],
+    "nowTitle": "In questo periodo",
+    "nowIntro": "A cosa sto dedicando il mio tempo.",
+    "items": [
+      {
+        "label": "Imparo",
+        "text": "Studio Ingegneria Meccanica al Politecnico di Torino e frequento il percorso interdisciplinare di eccellenza [INTRAPRENDENTI](https://www.polito.it/didattica/polito-learning-experiences/learning-experiences-in-interdisciplinarity/percorso-intraprendenti). Per le attività universitarie e i progetti tecnici preferisco usare C++, Python e MATLAB."
+      },
+      {
+        "label": "Realizzo",
+        "text": "Mi occupo di progettazione e analisi strutturale nel [progetto Advanced Propulsion Aircraft del Team Icarus](https://icarus.polito.it/apa-2025/), utilizzando SolidWorks, HyperMesh e HyperView. Faccio anche parte della sezione [Firmware (IT)](https://icarus.polito.it/it-2025/) del Team Icarus, dove usiamo [FreeRTOS](https://www.freertos.org/) su [microcontrollori STM32](https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html) per sviluppare in C sistemi proprietari di controllo del volo e telemetria."
+      },
+      {
+        "label": "Guardo avanti",
+        "text": "Cerco tirocini in ambito meccanico e strutturale, preferibilmente a Torino, con disponibilità a spostamenti e trasferte in Italia e nell’Unione europea."
+      }
+    ],
+    "exploreTitle": "Conoscimi meglio",
+    "links": [
+      {
+        "page": "competences",
+        "title": "Di cosa mi occupo",
+        "description": "Competenze, progetti e attività"
+      },
+      {
+        "page": "cv",
+        "title": "Il mio CV",
+        "description": "Formazione ed esperienze"
+      },
+      {
+        "page": "links",
+        "title": "Dove trovarmi",
+        "description": "Profili e contatti"
+      }
+    ],
+    "portraitAlt": "Ritratto di Riccardo Giorgi",
+    "portraitCaption": ""
+  },
+  "theme": {
+    "light": "Attiva il tema chiaro",
+    "dark": "Attiva il tema scuro"
+  },
+  "links": {
+    "title": "Trova tutto",
+    "intro": "Una mappa di progetti, profili e modi per contattarmi.",
+    "hint": "Apri i rami con un clic. Trascina i nodi per spostarli e lo sfondo per muoverti. Scorri o usa due dita per lo zoom.",
+    "expand": "Espandi tutto",
+    "collapse": "Chiudi tutto",
+    "fit": "Adatta alla vista",
+    "reset": "Ripristina layout",
+    "list": "Sfoglia come elenco",
+    "graph": "Albero interattivo dei link",
+    "zoomIn": "Ingrandisci",
+    "zoomOut": "Riduci",
+    "textView": "Vista testo",
+    "treeView": "Vista albero"
+  },
+  "cv": {
+    "eyebrow": "Curriculum vitae",
+    "title": "CV stampabile",
+    "intro": "Leggi il mio CV qui sotto. Usa i comandi del lettore PDF per stamparlo oppure scaricane una copia.",
+    "download": "Scarica il PDF",
+    "open": "Apri il PDF in una nuova scheda",
+    "pdfTitle": "Riccardo Giorgi — curriculum vitae in italiano",
+    "fallback": "Il tuo browser non può visualizzare il PDF in questa pagina."
+  }
+}

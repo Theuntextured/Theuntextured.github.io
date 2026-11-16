@@ -1,0 +1,209 @@
+{
+  "id": "root",
+  "icon": "network",
+  "name": {
+    "en": "Find everything",
+    "it": "Trova tutto"
+  },
+  "children": [
+    {
+      "id": "website",
+      "icon": "folder",
+      "name": {
+        "en": "This website",
+        "it": "Questo sito"
+      },
+      "children": [
+        {
+          "id": "about",
+          "icon": "image",
+          "name": {
+            "en": "About me",
+            "it": "Chi sono"
+          },
+          "description": {
+            "en": "The short introduction",
+            "it": "Una breve presentazione"
+          },
+          "page": "home"
+        },
+        {
+          "id": "work",
+          "icon": "wrench",
+          "name": {
+            "en": "Competences & activities",
+            "it": "Competenze e attività"
+          },
+          "description": {
+            "en": "What I do and build",
+            "it": "Cosa faccio e realizzo"
+          },
+          "page": "competences"
+        },
+        {
+          "id": "current-projects",
+          "icon": "wrench",
+          "name": {
+            "en": "Current projects",
+            "it": "Progetti in corso"
+          },
+          "description": {
+            "en": "What I'm working on now",
+            "it": "A cosa sto lavorando in questo periodo"
+          },
+          "page": "projects"
+        },
+        {
+          "id": "certificates",
+          "icon": "graduation-cap",
+          "name": {
+            "en": "Certificates",
+            "it": "Certificati"
+          },
+          "description": {
+            "en": "Courses and qualifications",
+            "it": "Corsi e qualifiche"
+          },
+          "page": "certificates"
+        },
+        {
+          "id": "cv",
+          "icon": "file-text",
+          "name": {
+            "en": "Printable CV",
+            "it": "CV stampabile"
+          },
+          "description": {
+            "en": "Education and experience",
+            "it": "Formazione ed esperienze"
+          },
+          "page": "cv"
+        }
+      ]
+    },
+    {
+      "id": "profiles",
+      "icon": "link",
+      "name": {
+        "en": "Around the web",
+        "it": "Sul web"
+      },
+      "children": [
+        {
+          "id": "github-profile",
+          "icon": "link",
+          "name": {
+            "en": "GitHub",
+            "it": "GitHub"
+          },
+          "description": {
+            "en": "Code and personal projects",
+            "it": "Codice e progetti personali"
+          },
+          "href": "https://github.riccardogiorgi.tech"
+        },
+        {
+          "id": "linkedin-profile",
+          "icon": "link",
+          "name": {
+            "en": "LinkedIn",
+            "it": "LinkedIn"
+          },
+          "description": {
+            "en": "Education and professional experience",
+            "it": "Formazione ed esperienze professionali"
+          },
+          "href": "https://www.linkedin.com/in/riccardo-giorgi-67b1b2240/"
+        },
+        {
+          "id": "fab-publications",
+          "icon": "link",
+          "name": {
+            "en": "FAB",
+            "it": "FAB"
+          },
+          "description": {
+            "en": "Unreal Engine publications",
+            "it": "Pubblicazioni per Unreal Engine"
+          },
+          "href": "https://www.fab.com/sellers/The%20untextured%20Dev"
+        },
+        {
+          "id": "maya-credential",
+          "icon": "graduation-cap",
+          "name": {
+            "en": "Maya credential",
+            "it": "Certificazione Maya"
+          },
+          "description": {
+            "en": "Verify my Autodesk Maya certification",
+            "it": "Verifica la mia certificazione Autodesk Maya"
+          },
+          "href": "https://www.credly.com/badges/286b9940-d45e-47c7-855e-a76377268bc5/"
+        },
+        {
+          "id": "icarus-project",
+          "icon": "wrench",
+          "name": {
+            "en": "Team Icarus",
+            "it": "Team Icarus"
+          },
+          "description": {
+            "en": "Advanced Propulsion Aircraft and firmware",
+            "it": "Progetto Advanced Propulsion Aircraft e firmware"
+          },
+          "href": "https://icarus.polito.it/"
+        },
+        {
+          "id": "game-jam",
+          "icon": "link",
+          "name": {
+            "en": "Unintended Upgrades",
+            "it": "Unintended Upgrades"
+          },
+          "description": {
+            "en": "Game jam project",
+            "it": "Progetto per una game jam"
+          },
+          "href": "https://the-untextured.itch.io/unintended-upgrades"
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "icon": "mail",
+      "name": {
+        "en": "Get in touch",
+        "it": "Contatti"
+      },
+      "children": [
+        {
+          "id": "email-contact",
+          "icon": "mail",
+          "name": {
+            "en": "Email",
+            "it": "Email"
+          },
+          "description": {
+            "en": "riccardogiorgi29@gmail.com",
+            "it": "riccardogiorgi29@gmail.com"
+          },
+          "href": "mailto:riccardogiorgi29@gmail.com"
+        },
+        {
+          "id": "phone-contact",
+          "icon": "link",
+          "name": {
+            "en": "Phone",
+            "it": "Telefono"
+          },
+          "description": {
+            "en": "+39 371 387 0042",
+            "it": "+39 371 387 0042"
+          },
+          "href": "tel:+393713870042"
+        }
+      ]
+    }
+  ]
+}
